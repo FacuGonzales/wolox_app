@@ -53,7 +53,7 @@ html {
 
 
 body {
-    background-image: url(./assets/Backgrounds/Bg_Header.png);
+    /* background-image: url(./assets/Backgrounds/Bg_Header.png); */
     font-weight: 300;
     line-height: 1.6;
 }
