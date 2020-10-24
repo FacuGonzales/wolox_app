@@ -1,1 +1,36 @@
-<p>nav works!</p>
+
+<div class="container-nav">
+    <div class="logo-nav">
+        <img src="../../../assets/logo_full_color.svg" alt="">
+    </div>
+
+    <div class="menu-nav">
+        <ul class="menu-ul-nav">
+            <li>Inicio</li>
+            <li>Beneficios</li>
+            <li class="button_loggin bg-transparent">Login</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="button_menu_mobile" (click)="onClick()">
+    <!-- <span [ngClass]="{ 'button_menu_burguer': 'viewButton === false',
+                       'button_menu_burguer button_menu_clear': 'viewButton === true'}">
+        &nbsp;
+    </span> -->
+    <span class='button_menu_burguer' *ngIf="viewButton === false">
+        &nbsp;
+    </span>
+    <span class='button_menu_burguer button_menu_clear'  *ngIf="viewButton === true">
+        &nbsp;
+    </span>
+
+    <div class="menu-nav-mobile" *ngIf="viewButton === true">
+        <ul>
+            <li>Inicio</li>
+            <li>Beneficios</li>
+            <li>Login</li>
+        </ul>
+    </div>
+</div>
