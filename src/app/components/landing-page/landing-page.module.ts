@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { LandingPageComponent } from './landing-page.component';
 import { HomeComponent,
-         InicioComponent } from './components';
+         InicioComponent,
+         BeneficiosComponent } from './components';
 
 
 @NgModule({
     declarations: [
         LandingPageComponent,
         HomeComponent,
-        InicioComponent
+        InicioComponent,
+        BeneficiosComponent
     ],
     imports: [
         BrowserModule,
