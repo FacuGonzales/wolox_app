@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { LandingPageComponent } from './landing-page.component';
 import { HomeComponent,
          InicioComponent,
-         BeneficiosComponent } from './components';
+         BeneficiosComponent,
+         FooterComponent } from './components';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { HomeComponent,
         LandingPageComponent,
         HomeComponent,
         InicioComponent,
-        BeneficiosComponent
+        BeneficiosComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
