@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+}
+
+@media only screen and (max-width: 1300px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    html{
+        font-size: 40%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    html{
+        font-size: 35%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    html{
+        font-size: 60%;
+    }
+  
+}
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    html{
+        font-size: 40%;
+    } 
+}
+@media only screen and (max-width: 400px) {
+    html{
+        font-size: 30%;
+    } 
+}
+
+
+body {
+  font-weight: 300;
+  line-height: 1.6;
+}
