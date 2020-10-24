@@ -1,0 +1,89 @@
+@import '../../../../../assets/Fonts/fonts.css';
+
+.footer-container {
+    background-image: url("../../../../../assets/Backgrounds/Bg_Footer@3x.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        background-image: url("../../../../../assets/Backgrounds/Bg_Footer.png");
+        background-size: contain;
+        background-position: center;
+        justify-content: center;
+    }
+}
+
+
+p.text_uno{
+    font-family: Montserratsemibold;
+    font-size: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    p.text_uno{
+        font-size: 3.5rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    p.text_uno{
+        font-size: 3rem;
+    }  
+}
+  
+
+p.text_dos{
+    font-family: MontserratRegular;
+    font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    p.text_dos{
+        font-size: 3.1rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    p.text_dos{
+        font-size: 2.8rem;
+    }
+}
+  
+div.text_tres{
+    margin-top: 40px;
+}
+
+.button-conocer-mas {
+    font-family: MontserratSemiBold;
+    font-size: 1.7rem;
+    cursor: pointer;
+    outline: none;
+    font-weight: 700;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #2aa7df;
+    border-radius: 40px;
+    display: block !important;
+    background-color: #2aa7df;
+    color: #ffffff;
+    padding: 1.1rem 5rem !important;
+    transition: background-color 0.2s;
+}
+
+.button-conocer-mas:hover {
+    background-color: transparent;
+    color: #2aa7df;
+    border: 1px solid #2aa7df;
+}
+
+img.text_cuatro{
+    margin: 0 auto;
+    width: 8%;
+    margin-top: 80px;
+    cursor: pointer;
+}
