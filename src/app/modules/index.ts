@@ -1,2 +1,2 @@
 export * from './landing-page';
-export * from './nav';
+export * from './register-page';
