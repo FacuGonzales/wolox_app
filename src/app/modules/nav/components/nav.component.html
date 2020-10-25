@@ -8,13 +8,13 @@
         <ul class="menu-ul-nav">
             <li>Inicio</li>
             <li>Beneficios</li>
-            <li class="button_loggin bg-transparent">Login</li>
+            <li class="button_loggin bg-transparent" (click)="register()">Login</li>
         </ul>
     </div>
 
 </div>
 
-<div class="button_menu_mobile" (click)="onClick()">
+<div class="button_menu_mobile" (click)="viewMobile()">
     <!-- <span [ngClass]="{ 'button_menu_burguer': 'viewButton === false',
                        'button_menu_burguer button_menu_clear': 'viewButton === true'}">
         &nbsp;
