@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {  LandingPageModule } from './components';
          
 
 @NgModule({
@@ -13,9 +12,9 @@ import {  LandingPageModule } from './components';
         
     ],
     imports: [
+        CommonModule,
         BrowserModule,
         AppRoutingModule,
-        LandingPageModule
     ],
     providers: [],
     bootstrap: [AppComponent],
