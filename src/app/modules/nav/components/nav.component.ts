@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'nav-component',
@@ -7,18 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  viewButton: boolean = false;
+    viewButton: boolean = false;
 
-  constructor() { }
+    constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  onClick(){
-    if(this.viewButton){
-      this.viewButton = false;
-    }else{
-      this.viewButton = true;
-    };
-  }
+    viewMobile(){
+        if(this.viewButton){
+            this.viewButton = false;
+        }else{
+            this.viewButton = true;
+        };
+    }
+
+    register(){
+        this.router.navigate(['/register']);
+    }
 }
