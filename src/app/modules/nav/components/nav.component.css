@@ -1,4 +1,4 @@
-@import '../../../assets/Fonts/fonts.css';
+@import '../../../../assets/Fonts/fonts.css';
 
 .container-nav {
     display: flex;
@@ -149,7 +149,7 @@
     left: 0;
     font-size: 4rem;
     font-family: MontserratSemiBold;
-    background-image: url("../../../assets/Backgrounds/Bg_Footer.png"), linear-gradient( 0deg, rgba(255, 255, 255, 1) 0%,  rgba(255, 255, 255, 1) 100% );
+    background-image: url("../../../../assets/Backgrounds/Bg_Footer.png"), linear-gradient( 0deg, rgba(255, 255, 255, 1) 0%,  rgba(255, 255, 255, 1) 100% );
     background-size: contain;
     background-position: center;
 
