@@ -9,11 +9,12 @@ import { HomeComponent,
          FooterComponent } from './components';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from '../nav';
+import { NavModule } from '../nav/nav.module';
 
 @NgModule({
     imports: [
         LandingPageRoutingModule,
+        NavModule
     ],
     declarations: [
         LandingPageComponent,
