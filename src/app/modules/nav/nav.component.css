@@ -124,7 +124,11 @@
 }
 
 .button_menu_clear {
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color:#a3cc39;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .button_menu_clear::before {
@@ -145,6 +149,13 @@
     left: 0;
     font-size: 4rem;
     font-family: MontserratSemiBold;
+    background-image: url("../../../assets/Backgrounds/Bg_Footer.png"), linear-gradient( 0deg, rgba(255, 255, 255, 1) 0%,  rgba(255, 255, 255, 1) 100% );
+    background-size: contain;
+    background-position: center;
+
+    top: 0;
+    left: 0;
+    font-size: 8rem;
 }
 
 .menu-nav-mobile ul{
