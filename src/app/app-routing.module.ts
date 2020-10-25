@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+import { LandingPageComponent } from './modules';
 
 
 const routes: Routes = [
     {   path: '', 
-        loadChildren: () => import('./components/landing-page/landing-page.module').then(m => m.LandingPageModule),
+        loadChildren: () => import('./modules/landing-page/landing-page.module').then(m => m.LandingPageModule),
     }, 
+    // {
+    //     path: '', component: LandingPageComponent
+    // }
+
   
 ];
 
