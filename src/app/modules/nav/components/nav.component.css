@@ -42,7 +42,7 @@
 
 .menu-nav ul li:hover{
     cursor: pointer;
-    color: #a3cc39;
+    color: #2aa7df;
     transition: 0.2s
 }
 
@@ -103,7 +103,7 @@
     cursor: pointer;
     width: 40px;
     height: 4px;
-    background-color:#a3cc39;
+    background-color:#2aa7df;
     display: inline-block;
 }
 
@@ -124,8 +124,7 @@
 }
 
 .button_menu_clear {
-    /* background-color: transparent; */
-    background-color:#a3cc39;
+    background-color: transparent;
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -168,6 +167,6 @@
 }
 
 .menu-nav-mobile ul li:hover{
-    color: #a3cc39;
+    color: #2aa7df;
     transition: 0.2s
 }
