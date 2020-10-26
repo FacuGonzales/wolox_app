@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoadingComponent } from './loading';
+import { NavComponent } from './nav';
 
 
 @NgModule({
@@ -8,8 +9,13 @@ import { LoadingComponent } from './loading';
         CommonModule,
     ],
     declarations: [
-        LoadingComponent
+        LoadingComponent,
+        NavComponent
     ],
     providers: [],
+    exports: [
+        LoadingComponent,
+        NavComponent
+    ]
 })
 export class SharedModule { }
