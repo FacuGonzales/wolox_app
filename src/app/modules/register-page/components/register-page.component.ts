@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { RegisterDataService } from '../services/register-data.service';
 import { Register } from '../models/register';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-register-page',
@@ -11,6 +12,10 @@ import { Register } from '../models/register';
     styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent implements OnInit {
+
+    loading: boolean = false;
+    success: boolean = false;
+    tError: boolean = false;
 
     userRegister: Register = new Register('', '', '', '', '', null, '');
 
@@ -37,6 +42,7 @@ export class RegisterPageComponent implements OnInit {
     subscribes: Subscription[] = [];
 
     constructor(private registerData: RegisterDataService,
+                private router: Router,
                 private fb: FormBuilder) { }
 
     ngOnInit(): void {
@@ -141,7 +147,7 @@ export class RegisterPageComponent implements OnInit {
         this.submitted = true;
 
         if(this.registerForm.valid){
-            // poner un loading=true
+            this.loading=true
             this.errorForm = false;
 
             this.userRegister.name = this.registerForm.get('nombre').value;
@@ -155,19 +161,31 @@ export class RegisterPageComponent implements OnInit {
             this.subscribes.push(this.registerData.register(this.userRegister).subscribe(
                 respuesta => {
                     if(respuesta){
-                        console.log(respuesta.token)
+                        this.success = true;
+
                         localStorage.setItem('token-wolox', JSON.stringify(respuesta.token));
-                        // Debemos poner un loading=false
+                        this.loading=false
                         // this.router.navigate(['/list']);
+                        setTimeout(() => {
+                            this.success = false
+                        }, 4000);
+                        
                         // cartel de creado!
                         // this.registerForm.reset();
                     }else{
                         // cartel de error
+                        this.loading=false;
+                        this.tError = true;
+                        setTimeout(() => {
+                            this.tError = false;
+                        }, 4000);
                     }
                 }, error => {
-                    // Debemos poner un loading=false
-                    // cartel de error
-                    console.log(error)
+                    this.loading=false
+                    this.tError = true;
+                    setTimeout(() => {
+                        this.tError = false;
+                    }, 4000);
                 }
             ))
             
@@ -176,5 +194,9 @@ export class RegisterPageComponent implements OnInit {
             this.registerForm.markAllAsTouched();
             this.errorForm = true;
         }
+    }
+
+    atras(){
+        this.router.navigate(['/'])
     }
 }
