@@ -16,7 +16,8 @@ import { ListPageComponent } from './page';
 
     ],
     declarations: [
-    ListPageComponent],
+        ListPageComponent
+    ],
     providers: [],
 })
 export class ListPageModule { }
