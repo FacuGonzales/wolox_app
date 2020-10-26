@@ -214,3 +214,16 @@ input.telefono{
     justify-content: center;
     display: flex;
 }
+
+.back_home{
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+}
+
+.back_home a{
+    margin: 0px auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
