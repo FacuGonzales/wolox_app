@@ -165,27 +165,26 @@ export class RegisterPageComponent implements OnInit {
 
                         localStorage.setItem('token-wolox', JSON.stringify(respuesta.token));
                         this.loading=false
-                        // this.router.navigate(['/list']);
                         setTimeout(() => {
                             this.success = false
-                        }, 4000);
+                        }, 3000);
+
+                        this.router.navigate(['/list']);
                         
-                        // cartel de creado!
-                        // this.registerForm.reset();
                     }else{
                         // cartel de error
                         this.loading=false;
                         this.tError = true;
                         setTimeout(() => {
                             this.tError = false;
-                        }, 4000);
+                        }, 2000);
                     }
                 }, error => {
                     this.loading=false
                     this.tError = true;
                     setTimeout(() => {
                         this.tError = false;
-                    }, 4000);
+                    }, 2000);
                 }
             ))
             
