@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RegisterPageRoutingModule } from './register-page-routing.module';
-import { RegisterPageComponent } from './components';
+import { RegisterPageComponent } from './page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
