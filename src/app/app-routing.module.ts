@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
+const defaultPathApp = '/';
 
 const routes: Routes = [
     {   path: '', 
@@ -9,6 +10,12 @@ const routes: Routes = [
     {   path: 'register', 
         loadChildren: () => import('./modules/register-page/register-page.module').then(m => m.RegisterPageModule),
     }, 
+    {   path: 'list', 
+        loadChildren: () => import('./modules/list-page/list-page.module').then(m => m.ListPageModule),
+    },
+    {
+        path: '**', redirectTo: defaultPathApp
+    }
 
   
 ];
