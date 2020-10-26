@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RegisterPageRoutingModule } from './register-page-routing.module';
 import { RegisterPageComponent } from './components';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RegisterPageComponent } from './components';
         CommonModule,
         RegisterPageRoutingModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        SharedModule
 
     ],
     declarations: [
