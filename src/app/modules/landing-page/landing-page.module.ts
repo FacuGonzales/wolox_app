@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
+import { SharedModule } from '../../shared/shared.module';
 import { LandingPageRoutingModule } from './landing-page-routing.module';
 
 import { LandingPageComponent } from './landing-page.component';
@@ -7,14 +9,12 @@ import { HomeComponent,
          InicioComponent,
          BeneficiosComponent,
          FooterComponent } from './components';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { NavModule } from '../nav/nav.module';
 
 @NgModule({
     imports: [
+        CommonModule,
         LandingPageRoutingModule,
-        NavModule
+        SharedModule
     ],
     declarations: [
         LandingPageComponent,
