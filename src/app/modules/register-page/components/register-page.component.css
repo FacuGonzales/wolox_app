@@ -1,0 +1,216 @@
+@import '../../../../assets/Fonts/fonts.css';
+
+.register-container{
+    background-image: url("../../../../assets/Backgrounds/Bg_Footer.png");
+    background-size: contain;
+    background-position: center;
+
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+    .register-container{
+        grid-template-columns: 100%;
+    }
+}
+
+.formulario-container{
+    margin: 50px auto;
+    width: 50%; /*50%;*/
+    font-family: MontserratRegular;
+}
+
+@media only screen and (max-width: 1200px) {
+    .formulario-container{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .formulario-container{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .formulario-container{
+        width: 80%;
+    }
+}
+
+.formulario-container .form-container h1{
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 0px;
+    /* agregado */
+    border-top: 1px solid #2aa7df;
+    border-bottom: 1px solid #a3cc39;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 900px) {
+    .formulario-container .form-container h1{
+        font-size: 20px;
+    }
+}
+
+.input-container label{
+    margin-bottom: 15px;
+    color: #2aa7df;
+    font-family: MontserratBold;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .input-container label{
+        font-size: 11.66px;
+    }
+}
+
+.input-container input,
+.input-container select{
+    outline: none;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #2aa7df;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.input-container input:focus {
+    border-bottom: 2px solid #2aa7df;
+    background-color: #2aa6df42;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .input-container input{
+        font-size: 14px;
+    }
+}
+
+.numero-container{
+    display: grid;
+    grid-template-columns: 15% 121%;
+}
+
+@media only screen and (max-width: 600px) {
+    .numero-container{
+        grid-template-columns: 25% 108%;
+    }
+}
+
+.nac-container{
+    display: flex;
+    width: 50rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .nac-container{
+        width: 70rem;
+    }
+}
+
+.nac-container span.bandera{
+    width: 10%;
+}
+
+.nac-container span.bandera img{
+    width: 4.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .nac-container span.bandera img{
+        width: 6.5rem;
+        height: 5.5rem;
+    }
+}
+
+.nac-container input.codigo{
+    width: 8%;
+}
+
+@media only screen and (max-width: 600px) {
+    .nac-container input.codigo{
+        width: 12%;
+    }
+}
+
+input.telefono{
+    width: 70% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .input-container input{
+        font-size: 14px;
+    }
+}
+
+.combo_input{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.combo_input .combo_izq,
+.combo_input .combo_der{
+    width: 95%;
+}
+
+.combo_input .combo_der{
+    margin-left: 15px;
+}
+
+.combo_check{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.combo_check input.check{
+    width: 2rem!important;
+    height: 5rem;
+    padding: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.combo_check a{
+    font-size: 15px;
+    font-style: none !important;
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.error{
+    margin-bottom: 10px;
+    color: red;
+    font-family: MontserratBold;
+    font-size: 12px;
+}
+
+.formInvalid{
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+}
+  
+@media only screen and (max-width: 600px) {
+    .error{
+        font-size: 9.66px;
+    }
+}
+
+.button-container{
+    justify-content: center;
+    display: flex;
+}
