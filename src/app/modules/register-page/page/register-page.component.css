@@ -97,8 +97,8 @@
 }
 
 .numero-container{
-    display: grid;
-    grid-template-columns: 15% 121%;
+    display: flex;
+    
 }
 
 @media only screen and (max-width: 600px) {
@@ -108,13 +108,16 @@
 }
 
 .nac-container{
-    display: flex;
-    width: 50rem;
+    height: fit-content;
+    padding: 7px 0px;
+    width: 10%;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
     .nac-container{
-        width: 70rem;
+        display: none;
+
     }
 }
 
@@ -123,28 +126,23 @@
 }
 
 .nac-container span.bandera img{
-    width: 4.5rem;
+    
+    width: 40px;
+    
+}
+
+input.codigo{
+    width: 10% !important;
 }
 
 @media only screen and (max-width: 600px) {
-    .nac-container span.bandera img{
-        width: 6.5rem;
-        height: 5.5rem;
-    }
-}
-
-.nac-container input.codigo{
-    width: 8%;
-}
-
-@media only screen and (max-width: 600px) {
-    .nac-container input.codigo{
-        width: 12%;
+    input.codigo{
+        width: 20% !important;
     }
 }
 
 input.telefono{
-    width: 70% !important;
+    width: 85% !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -165,6 +163,12 @@ input.telefono{
 
 .combo_input .combo_der{
     margin-left: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .combo_input .combo_der{
+        margin-left: 10px;
+    }
 }
 
 .combo_check{
