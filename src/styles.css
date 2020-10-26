@@ -96,6 +96,14 @@ button:hover {
     color: white;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 .color_azul{
     color: #2aa7df ;
+}
+
+.color_verde{
+    color: #a3cc39;
 }
