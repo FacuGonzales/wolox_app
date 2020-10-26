@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoadingComponent } from './loading';
 import { NavComponent } from './nav';
-import { TermAndConditComponent } from './termAndCondit';
 import { SuccessComponent } from './success';
 import { ErrorComponent } from './error';
 
@@ -14,7 +13,6 @@ import { ErrorComponent } from './error';
     declarations: [
         LoadingComponent,
         NavComponent,
-        TermAndConditComponent,
         SuccessComponent,
         ErrorComponent
     ],
@@ -22,7 +20,6 @@ import { ErrorComponent } from './error';
     exports: [
         LoadingComponent,
         NavComponent,
-        TermAndConditComponent,
         SuccessComponent,
         ErrorComponent
     ]
