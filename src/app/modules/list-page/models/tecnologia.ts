@@ -1,4 +1,4 @@
-export class Register {
+export class Tecnologias {
     constructor(
         public tech: string,
         public year: string,
