@@ -16,14 +16,7 @@
 </div>
 
 <div class="button_menu_mobile" (click)="viewMobile()">
-    <!-- <span [ngClass]="{ 'button_menu_burguer': 'viewButton === false',
-                       'button_menu_burguer button_menu_clear': 'viewButton === true'}">
-        &nbsp;
-    </span> -->
-    <span class='button_menu_burguer' *ngIf="viewButton === false">
-        &nbsp;
-    </span>
-    <span class='button_menu_burguer button_menu_clear'  *ngIf="viewButton === true">
+    <span class="button_menu_burguer" [ngClass]="{' button_menu_clear':viewButton == true}">
         &nbsp;
     </span>
 
