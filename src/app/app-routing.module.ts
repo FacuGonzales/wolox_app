@@ -13,7 +13,7 @@ const routes: Routes = [
     {   path: 'register', 
         loadChildren: () => import('./modules/register-page/register-page.module').then(m => m.RegisterPageModule),
     }, 
-    {   path: 'list', 
+    {   path: 'listado', 
         loadChildren: () => import('./modules/list-page/list-page.module').then(m => m.ListPageModule),
         canActivate: [UserGuardService]
     },
