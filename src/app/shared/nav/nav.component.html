@@ -8,7 +8,8 @@
         <ul class="menu-ul-nav">
             <li>Inicio</li>
             <li>Beneficios</li>
-            <li class="button_loggin bg-transparent" (click)="register()">Regístrate</li>
+            <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+            <li [routerLink]="['/listado']" *ngIf="token">Listado</li>
         </ul>
     </div>
 
@@ -30,7 +31,8 @@
         <ul>
             <li>Inicio</li>
             <li>Beneficios</li>
-            <li  class="button_loggin bg-transparent" (click)="register()">Registrate</li>
+            <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+            <li [routerLink]="['/listado']" *ngIf="token">Listado</li>
         </ul>
     </div>
 </div>
