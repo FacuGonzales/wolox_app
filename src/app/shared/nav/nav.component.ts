@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import {UserGuardService} from '../../services/user-guard.service';
+
 @Component({
   selector: 'nav-component',
   templateUrl: './nav.component.html',
@@ -9,10 +11,16 @@ import { Router } from '@angular/router';
 export class NavComponent implements OnInit {
 
     viewButton: boolean = false;
+    token: string;
 
-    constructor(private router: Router) { }
+    constructor() { }
 
     ngOnInit(): void {
+        this.obtenerToken();
+    }
+
+    obtenerToken(){
+        this.token = localStorage.getItem('token-wolox')
     }
 
     viewMobile(){
@@ -21,9 +29,5 @@ export class NavComponent implements OnInit {
         }else{
             this.viewButton = true;
         };
-    }
-
-    register(){
-        this.router.navigate(['/register']);
     }
 }
