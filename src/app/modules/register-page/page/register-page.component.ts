@@ -169,7 +169,7 @@ export class RegisterPageComponent implements OnInit {
                             this.success = false
                         }, 3000);
 
-                        this.router.navigate(['/list']);
+                        this.router.navigate(['/listado']);
                         
                     }else{
                         // cartel de error
