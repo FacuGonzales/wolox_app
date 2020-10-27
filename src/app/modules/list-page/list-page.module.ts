@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 
+import { ListPageRoutingModule } from './list-page-routing.module';
 import { ListPageComponent } from './page';
 
 
@@ -12,7 +13,8 @@ import { ListPageComponent } from './page';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        SharedModule
+        SharedModule,
+        ListPageRoutingModule
 
     ],
     declarations: [
