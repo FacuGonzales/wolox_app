@@ -18,8 +18,8 @@ export class ListPageComponent implements OnInit {
 
   _tecnObtenidas: Tecnologias[] = [];
   _listadoFiltrado: Tecnologias[] = [];
+  
   techLiked: string[] = [];
-  @Output() tecnologiaLiked = new EventEmitter<any>()
 
   subscribes: Subscription[] = [];
 
@@ -122,20 +122,6 @@ export class ListPageComponent implements OnInit {
       this.techLiked.push(value);
     }
 
-
-
-    // if(this.techLiked.length != 0){
-    //   this.techLiked.forEach(t => {
-    //     if(t != value){
-    //       this.techLiked.push(value);
-    //     }else{
-    //       let index = this.techLiked.findIndex(e => e == value);
-    //       this.techLiked.splice(index, 1);
-    //     }
-    //   })
-    // }else{
-    //   this.techLiked.push(value);
-    // }
     localStorage.setItem('tecnologías-favoritas', JSON.stringify(this.techLiked));
   }
 }
