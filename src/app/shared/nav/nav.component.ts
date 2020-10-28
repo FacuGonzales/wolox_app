@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { Router } from '@angular/router';
 
 import {UserGuardService} from '../../services/user-guard.service';
@@ -13,14 +13,24 @@ export class NavComponent implements OnInit {
     viewButton: boolean = false;
     token: string;
 
+    @Input() cantidadLike?: number = 0;
+
     constructor() { }
 
     ngOnInit(): void {
         this.obtenerToken();
+        this.obtenerLikedsLS();
     }
 
     obtenerToken(){
         this.token = localStorage.getItem('token-wolox')
+    }
+
+    obtenerLikedsLS(){
+        let techLiked: [] = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
+        if(techLiked.length != 0){
+            this.cantidadLike = techLiked.length;
+        }
     }
 
     viewMobile(){
@@ -30,4 +40,5 @@ export class NavComponent implements OnInit {
             this.viewButton = true;
         };
     }
+
 }
