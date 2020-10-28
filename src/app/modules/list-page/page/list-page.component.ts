@@ -19,7 +19,8 @@ export class ListPageComponent implements OnInit {
   _tecnObtenidas: Tecnologias[] = [];
   _listadoFiltrado: Tecnologias[] = [];
   
-  techLiked: string[] = [];
+  techLiked: string[] = []
+  cantidadLike: number = 0;
 
   subscribes: Subscription[] = [];
 
@@ -27,6 +28,7 @@ export class ListPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerLista();
+    this.obtenerLiked();
     this.formSubscribes();
   }
 
@@ -114,6 +116,11 @@ export class ListPageComponent implements OnInit {
     )
   }
 
+  obtenerLiked(){
+    this.techLiked = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
+    this.cantidadLike = this.techLiked.length;
+  }
+
   liked(value){
     let index = this.techLiked.findIndex(e => e == value);
     if(index >= 0){
@@ -121,6 +128,8 @@ export class ListPageComponent implements OnInit {
     }else{
       this.techLiked.push(value);
     }
+
+    this.cantidadLike = this.techLiked.length;
 
     localStorage.setItem('tecnologías-favoritas', JSON.stringify(this.techLiked));
   }
