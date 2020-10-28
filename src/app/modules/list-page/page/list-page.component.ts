@@ -14,6 +14,8 @@ export class ListPageComponent implements OnInit {
   loading: boolean = false;
   tError: boolean = false;
 
+  tecnologiasForm = new FormControl();
+
   _tecnObtenidas: Tecnologias[] = [];
   _listadoFiltrado: Tecnologias[] = [];
 
@@ -23,6 +25,7 @@ export class ListPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerLista();
+    this.formSubscribes();
   }
 
   ngOnDestroy(){
@@ -92,5 +95,20 @@ export class ListPageComponent implements OnInit {
         return 0
       })
     }
+  }
+
+  formSubscribes(){
+    this.tecnologiasForm.valueChanges.subscribe(
+      value => {
+        let listaActualzada = this._tecnObtenidas;
+        if(value){
+          this._listadoFiltrado = listaActualzada.filter(
+            tec => tec.tech.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+          )
+        }else{
+          this._listadoFiltrado = this._tecnObtenidas;
+        }
+      }
+    )
   }
 }
