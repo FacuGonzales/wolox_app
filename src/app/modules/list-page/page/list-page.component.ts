@@ -69,4 +69,28 @@ export class ListPageComponent implements OnInit {
     }
   }
 
+  order(value){
+    let listaActualziada = this._tecnObtenidas;
+    if(value == 'A'){
+      this._listadoFiltrado.sort((a, b) => {
+        if(a.tech > b.tech){
+          return 1;
+        }else if(a.tech < b.tech){
+          return -1;
+        }
+        return 0
+        
+      })
+    
+    }else{
+      this._listadoFiltrado.sort((a, b) => {
+        if (a.tech > b.tech) {
+            return -1;
+        } else if (a.tech < b.tech) {
+            return 1;
+        }
+        return 0
+      })
+    }
+  }
 }
