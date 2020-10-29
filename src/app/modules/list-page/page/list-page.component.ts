@@ -19,7 +19,7 @@ export class ListPageComponent implements OnInit {
   _tecnObtenidas: Tecnologias[] = [];
   _listadoFiltrado: Tecnologias[] = [];
   
-  techLiked: string[] = []
+  techLiked: string[] = [];
   cantidadLike: number = 0;
 
   subscribes: Subscription[] = [];
@@ -117,8 +117,13 @@ export class ListPageComponent implements OnInit {
   }
 
   obtenerLiked(){
-    this.techLiked = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
-    this.cantidadLike = this.techLiked.length;
+    let _localStorage = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
+    if(_localStorage == null){
+      _localStorage = [];
+    }
+
+    this.techLiked = _localStorage;
+    this.cantidadLike = this.techLiked?.length; 
   }
 
   liked(value){
@@ -129,7 +134,7 @@ export class ListPageComponent implements OnInit {
       this.techLiked.push(value);
     }
 
-    this.cantidadLike = this.techLiked.length;
+    this.cantidadLike = this.techLiked?.length;
 
     localStorage.setItem('tecnologías-favoritas', JSON.stringify(this.techLiked));
   }
