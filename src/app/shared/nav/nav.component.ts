@@ -28,8 +28,8 @@ export class NavComponent implements OnInit {
 
   obtenerLikedsLS(){
     let techLiked: [] = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
-    if(techLiked.length != 0){
-      this.cantidadLike = techLiked.length;
+    if(techLiked?.length != 0){
+      this.cantidadLike = techLiked?.length;
     }
   }
 
