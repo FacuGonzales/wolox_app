@@ -1,98 +1,96 @@
-@import '../../../assets/Fonts/fonts.css';
+@import "../../../assets/Fonts/fonts.css";
 
 .container-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: MontserratSemiBold;
-    align-self: center;
-    height: fit-content;
-    padding: 30px 10%;
-    padding-left: 8%;
-    padding-right: 1%;
-    width: 100%;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: MontserratSemiBold;
+  align-self: center;
+  height: fit-content;
+  padding: 30px 10%;
+  padding-left: 8%;
+  padding-right: 1%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
-    .container-nav{
-        display: none;
-    }
+  .container-nav {
+    display: none;
+  }
 }
 
-.logo-nav img{
-    width: 50%;
+.logo-nav img {
+  width: 50%;
 }
 
-.logo-nav img:hover{
+.logo-nav img:hover {
   cursor: pointer;
 }
 
-.menu-nav ul.menu-ul-nav{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    font-size: 2rem;
+.menu-nav ul.menu-ul-nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  font-size: 2rem;
 }
 
-.menu-nav ul li{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding:0px 30px 0px 30px;
+.menu-nav ul li {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0px 30px 0px 30px;
 }
 
-.menu-nav ul li:hover{
-    cursor: pointer;
-    color: #2aa7df;
-    transition: 0.2s
+.menu-nav ul li:hover {
+  cursor: pointer;
+  color: #2aa7df;
+  transition: 0.2s;
 }
 
-.button_loggin{
-    font-family: MontserratSemiBold;
-    font-size: 1.7rem;
-    cursor: pointer;
-    outline: none;
-    font-weight: 700;
-    width: fit-content;
-    height: fit-content;
-    padding: 1rem 7rem !important;
-    color: #2aa7df !important;
-    border: 1px solid #2aa7df;
-    border-radius: 40px;
-    background-color: white;
-    transition: background-color 0.2s;
-    display: block !important;
-  
+.button_loggin {
+  font-family: MontserratSemiBold;
+  font-size: 1.7rem;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 7rem !important;
+  color: #2aa7df !important;
+  border: 1px solid #2aa7df;
+  border-radius: 40px;
+  background-color: white;
+  transition: background-color 0.2s;
+  display: block !important;
 }
 
 .button_loggin:hover {
-    background-color: #2aa7df;
-    color: white !important;
+  background-color: #2aa7df;
+  color: white !important;
 }
 
 .bg-transparent {
-    border: 2px solid #2aa7df;
-    background-color: transparent;
-    color: white;
+  border: 2px solid #2aa7df;
+  background-color: transparent;
+  color: white;
 }
 
 /* button burguer */
 .button_menu_mobile {
-    z-index: 1000;
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    top: 30px;
-    right: 10px;
-    height: 40px;
-    width: 40px;
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
 }
 
 @media only screen and (max-width: 768px) {
-    .button_menu_mobile {
-        display: block;
-    }
+  .button_menu_mobile {
+    display: block;
+  }
 }
 
 .button_menu_burguer {
@@ -100,75 +98,81 @@
   position: relative;
 }
 
-.button_menu_burguer, .button_menu_burguer::after,
+.button_menu_burguer,
+.button_menu_burguer::after,
 .button_menu_burguer::before {
-    cursor: pointer;
-    width: 40px;
-    height: 4px;
-    background-color:#2aa7df;
-    display: inline-block;
+  cursor: pointer;
+  width: 40px;
+  height: 4px;
+  background-color: #2aa7df;
+  display: inline-block;
 }
 
 .button_menu_burguer::after,
 .button_menu_burguer::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    transition: all 0.2s;
+  content: "";
+  position: absolute;
+  right: 0;
+  transition: all 0.2s;
 }
 
-.button_menu_burguer::after{
-    top: 10px;
+.button_menu_burguer::after {
+  top: 10px;
 }
 
 .button_menu_burguer::before {
-    top: -10px;
+  top: -10px;
 }
 
 .button_menu_clear {
-    background-color: transparent;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .button_menu_clear::before {
-    top: 0;
-    transform: rotate(135deg);
+  top: 0;
+  transform: rotate(135deg);
 }
 
 .button_menu_clear::after {
-    top: 0;
-    transform: rotate(-135deg);
+  top: 0;
+  transform: rotate(-135deg);
 }
 
-.menu-nav-mobile{
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    font-size: 4rem;
-    font-family: MontserratSemiBold;
-    background-image: url("../../../assets/Backgrounds/Bg_Footer.png"), linear-gradient( 0deg, rgba(255, 255, 255, 1) 0%,  rgba(255, 255, 255, 1) 100% );
-    background-size: contain;
-    background-position: center;
+.menu-nav-mobile {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  font-size: 4rem;
+  font-family: MontserratSemiBold;
+  background-image: url("../../../assets/Backgrounds/Bg_Mobile.png"),
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  background-size: contain;
+  background-position: center;
 
-    top: 0;
-    left: 0;
-    font-size: 8rem;
+  top: 0;
+  left: 0;
+  font-size: 8rem;
 }
 
-.menu-nav-mobile ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+.menu-nav-mobile ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
-.menu-nav-mobile ul li:hover{
-    color: #2aa7df;
-    transition: 0.2s
+.menu-nav-mobile ul li:hover {
+  color: #2aa7df;
+  transition: 0.2s;
 }
