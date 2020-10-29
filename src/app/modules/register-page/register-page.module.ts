@@ -6,19 +6,19 @@ import { RegisterPageRoutingModule } from './register-page-routing.module';
 import { RegisterPageComponent } from './page';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-
 @NgModule({
-    imports: [
-        CommonModule,
-        RegisterPageRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        SharedModule
+  imports: [
+    CommonModule,
+    RegisterPageRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule
 
-    ],
-    declarations: [
-        RegisterPageComponent
-    ],
-    providers: [],
+  ],
+  declarations: [
+    RegisterPageComponent
+  ],
+  providers: [],
 })
+
 export class RegisterPageModule { }

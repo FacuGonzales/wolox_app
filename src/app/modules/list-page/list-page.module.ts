@@ -9,17 +9,18 @@ import { ListPageComponent } from './page';
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        SharedModule,
-        ListPageRoutingModule
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
+    ListPageRoutingModule
 
-    ],
-    declarations: [
-        ListPageComponent
-    ],
-    providers: [],
+  ],
+  declarations: [
+    ListPageComponent
+  ],
+  providers: [],
 })
+
 export class ListPageModule { }

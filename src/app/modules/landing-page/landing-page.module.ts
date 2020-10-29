@@ -11,20 +11,19 @@ import { HomeComponent,
          FooterComponent } from './components';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        LandingPageRoutingModule,
-        SharedModule
-    ],
-    declarations: [
-        LandingPageComponent,
-        HomeComponent,
-        InicioComponent,
-        BeneficiosComponent,
-        FooterComponent,
-        
-    ],
+  imports: [
+    CommonModule,
+    LandingPageRoutingModule,
+    SharedModule
+  ],
+  declarations: [
+    LandingPageComponent,
+    HomeComponent,
+    InicioComponent,
+    BeneficiosComponent,
+    FooterComponent,   
+  ],
     
-    providers: [],
+  providers: [],
 })
 export class LandingPageModule { }

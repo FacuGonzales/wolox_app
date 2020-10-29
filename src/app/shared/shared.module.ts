@@ -9,22 +9,23 @@ import { ErrorComponent } from './error';
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        SharedRoutingModule
-    ],
-    declarations: [
-        LoadingComponent,
-        NavComponent,
-        SuccessComponent,
-        ErrorComponent
-    ],
-    providers: [],
-    exports: [
-        LoadingComponent,
-        NavComponent,
-        SuccessComponent,
-        ErrorComponent
-    ]
+  imports: [
+    CommonModule,
+    SharedRoutingModule
+  ],
+  declarations: [
+    LoadingComponent,
+    NavComponent,
+    SuccessComponent,
+    ErrorComponent
+  ],
+  providers: [],
+  exports: [
+    LoadingComponent,
+    NavComponent,
+    SuccessComponent,
+    ErrorComponent
+  ]
 })
+
 export class SharedModule { }

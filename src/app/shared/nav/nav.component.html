@@ -1,33 +1,32 @@
 
 <div class="container-nav">
-    <div class="logo-nav">
-        <img src="../../../assets/logo_full_color.svg" alt="">
-    </div>
+  <div class="logo-nav">
+      <img src="../../../assets/logo_full_color.svg" alt="">
+  </div>
 
-    <div class="menu-nav">
-        <ul class="menu-ul-nav">
-            <li>Inicio</li>
-            <li>Beneficios</li>
-            <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-            <li [routerLink]="['/listado']" *ngIf="token">
-                Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
-            </li>
-        </ul>
-    </div>
-
+  <div class="menu-nav">
+    <ul class="menu-ul-nav">
+      <li>Inicio</li>
+      <li>Beneficios</li>
+      <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li [routerLink]="['/listado']" *ngIf="token">
+          Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div class="button_menu_mobile" (click)="viewMobile()">
-    <span class="button_menu_burguer" [ngClass]="{' button_menu_clear':viewButton == true}">
-        &nbsp;
-    </span>
+  <span class="button_menu_burguer" [ngClass]="{' button_menu_clear':viewButton == true}">
+    &nbsp;
+  </span>
 
-    <div class="menu-nav-mobile" *ngIf="viewButton === true">
-        <ul>
-            <li>Inicio</li>
-            <li>Beneficios</li>
-            <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-            <li [routerLink]="['/listado']" *ngIf="token">Listado</li>
-        </ul>
-    </div>
+  <div class="menu-nav-mobile" *ngIf="viewButton === true">
+    <ul>
+      <li>Inicio</li>
+      <li>Beneficios</li>
+      <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li [routerLink]="['/listado']" *ngIf="token">Listado</li>
+    </ul>
+  </div>
 </div>

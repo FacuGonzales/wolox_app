@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListPageComponent } from './page';
 
 const routes: Routes = [
-    {
-        path: '', component: ListPageComponent
-    }
+  {
+    path: '', component: ListPageComponent
+  }
 ];
 
 @NgModule({

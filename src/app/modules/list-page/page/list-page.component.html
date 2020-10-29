@@ -1,47 +1,47 @@
 <nav-component [cantidadLike]="cantidadLike"></nav-component>
 
 <div class="list-page-container">
-    <h1>Listado de Tecnologías</h1>
+  <h1>Listado de Tecnologías</h1>
 
-    <div class="filter-container">
-        <input type="text" class="input_filter" [formControl]="tecnologiasForm" placeholder="Buscar una tecnología" autocomplete="off">
+  <div class="filter-container">
+    <input type="text" class="input_filter" [formControl]="tecnologiasForm" placeholder="Buscar una tecnología" autocomplete="off">
 
-        <div class="buttons_filter">
-            <ul id="opc-flters">
-                <li (click)="filter('')">Todos</li>
-                <li (click)="filter('Front-End')">Front</li>
-                <li (click)="filter('Back-End')">Back</li>
-                <li (click)="filter('Mobile')">Mobile</li>
-                <li (click)="order('A')">A-Z</li>
-                <li (click)="order('Z')">Z-A</li>
-            </ul>
+    <div class="buttons_filter">
+      <ul id="opc-flters">
+        <li (click)="filter('')">Todos</li>
+        <li (click)="filter('Front-End')">Front</li>
+        <li (click)="filter('Back-End')">Back</li>
+        <li (click)="filter('Mobile')">Mobile</li>
+        <li (click)="order('A')">A-Z</li>
+        <li (click)="order('Z')">Z-A</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="list-container" >
+      
+    <div class="item-container" *ngFor="let item of _listadoFiltrado">
+      <div class="item-wrap">
+        <img src="{{ item.logo }}" class="img-fluid">
+
+        <div class="info-tec-container">
+          <h4>{{item.tech}}</h4>
+
+          <p>{{item.year}}</p>
+          <p>{{item.author}}</p>
+          <p>{{item.license}}</p>
+          <p>{{item.language}}</p>
+          <p>{{item.type}}</p>
+          <p (click)="liked(item.tech)">Button Like</p>
         </div>
+      </div>
     </div>
+      
+  </div>
 
-    <div class="list-container" >
-        
-        <div class="item-container" *ngFor="let item of _listadoFiltrado">
-            <div class="item-wrap">
-                <img src="{{ item.logo }}" class="img-fluid">
-
-                <div class="info-tec-container">
-                    <h4>{{item.tech}}</h4>
-
-                    <p>{{item.year}}</p>
-                    <p>{{item.author}}</p>
-                    <p>{{item.license}}</p>
-                    <p>{{item.language}}</p>
-                    <p>{{item.type}}</p>
-                    <p (click)="liked(item.tech)">Button Like</p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-    <div>
-        <p>Cantidad de tecnologias disponibles: {{_tecnObtenidas.length}}</p>
-    </div>
+  <div>
+    <p>Cantidad de tecnologias disponibles: {{_tecnObtenidas.length}}</p>
+  </div>
 </div>
 
 

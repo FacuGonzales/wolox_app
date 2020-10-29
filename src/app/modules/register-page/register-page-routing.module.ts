@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterPageComponent } from './page';
 
 const routes: Routes = [
-    {
-        path: '', component: RegisterPageComponent
-    }
+  {
+    path: '', component: RegisterPageComponent
+  }
 ];
 
 @NgModule({

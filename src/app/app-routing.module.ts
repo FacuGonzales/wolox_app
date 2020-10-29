@@ -6,27 +6,27 @@ import {UserGuardService} from './services/user-guard.service';
 const defaultPathApp = '/';
 
 const routes: Routes = [
-    {   path: '', 
-        loadChildren: () => import('./modules/landing-page/landing-page.module').then(m => m.LandingPageModule),
-        
-    }, 
-    {   path: 'register', 
-        loadChildren: () => import('./modules/register-page/register-page.module').then(m => m.RegisterPageModule),
-    }, 
-    {   path: 'listado', 
-        loadChildren: () => import('./modules/list-page/list-page.module').then(m => m.ListPageModule),
-        canActivate: [UserGuardService]
-    },
-    {
-        path: '**', redirectTo: defaultPathApp
-    }
+  { path: '', 
+    loadChildren: () => import('./modules/landing-page/landing-page.module').then(m => m.LandingPageModule),
+    
+  },
+  { path: 'register', 
+    loadChildren: () => import('./modules/register-page/register-page.module').then(m => m.RegisterPageModule),
+  },
+  { path: 'listado', 
+    loadChildren: () => import('./modules/list-page/list-page.module').then(m => m.ListPageModule),
+    canActivate: [UserGuardService]
+  },
+  {
+    path: '**', redirectTo: defaultPathApp
+  }
 
   
 ];
 
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes) ],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes) ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -6,8 +6,8 @@ import { Register } from '../models/register';
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterDataService {
 
+export class RegisterDataService {
 
   constructor(public http: HttpClient) { }
 
@@ -19,6 +19,5 @@ export class RegisterDataService {
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
     return this.http.post(url, params, {headers: headers});
-  }
-  
+  } 
 }
