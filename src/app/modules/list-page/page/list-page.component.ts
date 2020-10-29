@@ -18,6 +18,7 @@ export class ListPageComponent implements OnInit {
 
   _tecnObtenidas: Tecnologias[] = [];
   _listadoFiltrado: Tecnologias[] = [];
+  _tecnologiasVisibles: number;
   
   techLiked: string[] = [];
   cantidadLike: number = 0;
@@ -46,6 +47,7 @@ export class ListPageComponent implements OnInit {
           this.loading = false;
           this._tecnObtenidas = resultado;
           this._listadoFiltrado = this._tecnObtenidas;
+          this._tecnologiasVisibles = this._listadoFiltrado.length;
         }else{
           this.loading=false
           this.tError = true;
@@ -71,8 +73,10 @@ export class ListPageComponent implements OnInit {
       this._listadoFiltrado = listaActualziada.filter(
         tec => tec.type.toLocaleLowerCase().includes(value.toLocaleLowerCase())
       )
+      this._tecnologiasVisibles = this._listadoFiltrado.length;
     }else{
       this._listadoFiltrado = this._tecnObtenidas;
+      this._tecnologiasVisibles = this._listadoFiltrado.length;
     }
   }
 
