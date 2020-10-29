@@ -23,6 +23,7 @@
 
   <div class="menu-nav-mobile" *ngIf="viewButton === true">
     <ul>
+      <li [routerLink]="['/']">Home</li>
       <li>Inicio</li>
       <li>Beneficios</li>
       <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
