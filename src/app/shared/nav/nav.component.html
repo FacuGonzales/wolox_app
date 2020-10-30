@@ -1,33 +1,33 @@
 
 <div class="container-nav">
   <div class="logo-nav">
-      <img src="../../../assets/logo_full_color.svg" alt="" [routerLink]="['/']">
+      <img src="../../../assets/logo_full_color.svg" alt="" [routerLink]="['/']" id="homeId">
   </div>
 
   <div class="menu-nav">
     <ul class="menu-ul-nav">
-      <li>Inicio</li>
-      <li>Beneficios</li>
-      <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-      <li [routerLink]="['/listado']" *ngIf="token">
+      <li id="inicioId" [routerLink]="['/inicio']">Inicio</li>
+      <li id="beneficiosId" [routerLink]="['/beneficios']">Beneficios</li>
+      <li id="registerId" [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li id="listadoId" [routerLink]="['/listado']" *ngIf="token">
           Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
       </li>
     </ul>
   </div>
 </div>
 
-<div class="button_menu_mobile" (click)="viewMobile()">
+<div class="button_menu_mobile" (click)="viewMobile()" id="burguerButtonId">
   <span class="button_menu_burguer" [ngClass]="{' button_menu_clear':viewButton == true}">
     &nbsp;
   </span>
 
   <div class="menu-nav-mobile" *ngIf="viewButton === true">
     <ul>
-      <li [routerLink]="['/']">Home</li>
-      <li>Inicio</li>
-      <li>Beneficios</li>
-      <li [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-      <li [routerLink]="['/listado']" *ngIf="token">
+      <li id="homeId" [routerLink]="['/']">Home</li>
+      <li id="inicioId" [routerLink]="['/inicio']">Inicio</li>
+      <li id="beneficiosId" [routerLink]="['/beneficios']">Beneficios</li>
+      <li id="registerId" [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li id="listadoId" [routerLink]="['/listado']" *ngIf="token">
         Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
       </li>
     </ul>
