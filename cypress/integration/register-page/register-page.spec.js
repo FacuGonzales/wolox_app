@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('LandingPage', () => {
+context('RegisterPage', () => {
     beforeEach(() => {
         cy.visit('http://localhost:4200/register');
     })
