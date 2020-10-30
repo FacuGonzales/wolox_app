@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
 
   @Input() cantidadLike?: number = 0;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.obtenerToken();
@@ -39,6 +39,10 @@ export class NavComponent implements OnInit {
     }else{
       this.viewButton = true;
     };
+  }
+
+  navigateRouter(value){
+    this.router.navigate(['/'+ value], { fragment: value });
   }
 
 }
