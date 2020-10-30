@@ -15,7 +15,8 @@
                   autocomplete="off"
                   name="nombre" 
                   required
-                  formControlName="nombre">
+                  formControlName="nombre"
+                  id="nombreId">
 
           <p class="error" *ngIf="submitted && f.nombre.hasError('required')">El campo Nombre es requerido</p>
           <p class="error" *ngIf="submitted && f.nombre.hasError('minlength')">Debe tener minimo 3 caracteres</p>
@@ -28,7 +29,8 @@
                   placeholder="Apellido" 
                   autocomplete="off" 
                   name="apellido" 
-                  formControlName="apellido">
+                  formControlName="apellido"
+                  id="apellidoId">
 
           <p class="error" *ngIf="submitted && f.apellido.hasError('required')">El campo apellido es requerido</p>
           <p class="error" *ngIf="submitted && f.apellido.hasError('minlength')">Debe tener minimo 3 caracteres</p>
@@ -38,7 +40,7 @@
         <div class="input-container combo_input">
           <div class="combo_izq">
               <label for="pais">País</label>
-              <select name="pais" formControlName="pais" (ngModelChange)="changePais($event)">
+              <select name="pais" formControlName="pais" (ngModelChange)="changePais($event)" id="paisId">
                   <option value="" disabled>--Seleccionar--</option>
                   <option *ngFor="let item of paises">{{item}}</option>
               </select>
@@ -48,7 +50,7 @@
 
           <div class="combo_der">
               <label for="provincia">Provincia</label>
-              <select name="provincia" formControlName="provincia">
+              <select name="provincia" formControlName="provincia" id="provinciaId">
                   <option value="" disabled>--Seleccionar--</option>
 
                   <option *ngFor="let item of provincias">{{item}}</option>
@@ -64,7 +66,7 @@
                   placeholder="Email" 
                   autocomplete="off" 
                   name="email" 
-                  
+                  id="emailId"
                   formControlName="email">
 
           <p class="error" *ngIf="submitted && f.email.hasError('required')">El email es requerido</p>
@@ -91,6 +93,7 @@
                     autocomplete="off" 
                     class="telefono"
                     name="telefono" 
+                    id="telefonoId"
                     formControlName="telefono">
           </div>
 
@@ -105,6 +108,7 @@
                     placeholder="Contraseña" 
                     autocomplete="off" 
                     name="password"
+                    id="passwordId"
                     (ngModelChange)="validarPassword($event)"
                     formControlName="password">
 
@@ -118,6 +122,7 @@
                     placeholder="Repetir Contraseña" 
                     autocomplete="off" 
                     name="repeatPassword" 
+                    id="rpPasswordId"
                     (ngModelChange)="validarRepeatPass($event)"
                     formControlName="repeatPassword">
             
@@ -128,7 +133,7 @@
 
         <div class="input-container">
           <div class="combo_check">
-            <input type="checkbox" formControlName="terminosYcondiciones" class="check">
+            <input type="checkbox" formControlName="terminosYcondiciones" class="check" id="checkId">
             <a href="https://terminosycondicionesdeusoejemplo.com/" target="_blank">Acepto términos y condiciones</a>
           </div>
           <p class="error" *ngIf="submitted && f.terminosYcondiciones.hasError('required')">Debe aceptar terminos y condiciones</p>
@@ -136,7 +141,7 @@
 
         <div class="confir-container">
           <div class="button-container">
-            <button type="submit" class="button-conocer-mas" (click)="enviar()">ENVÍAR</button>
+            <button type="submit" class="button-conocer-mas" (click)="enviar()" id="buttonEnviar">ENVÍAR</button>
           </div>
 
           <div class="back_home">
