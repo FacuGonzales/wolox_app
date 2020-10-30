@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+import "cypress-localstorage-commands";
+
+Cypress.Commands.add('saveToken', () => {
+    window.localStorage.setItem('token-wolox', 'qiowAS9ndnjLKSS32LaLAPlDKL2');
+     
+});
