@@ -1,15 +1,15 @@
 
 <div class="container-nav">
   <div class="logo-nav">
-      <img src="../../../assets/logo_full_color.svg" alt="" [routerLink]="['/']" id="homeId">
+      <img src="../../../assets/logo_full_color.svg" alt="" (click)="navigateRouter('home')" id="homeId">
   </div>
 
   <div class="menu-nav">
     <ul class="menu-ul-nav">
-      <li id="inicioId" [routerLink]="['/inicio']">Inicio</li>
-      <li id="beneficiosId" [routerLink]="['/beneficios']">Beneficios</li>
-      <li id="registerId" [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-      <li id="listadoId" [routerLink]="['/listado']" *ngIf="token">
+      <li id="inicioId" (click)="navigateRouter('inicio')">Inicio</li>
+      <li id="beneficiosId" (click)="navigateRouter('beneficios')">Beneficios</li>
+      <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li id="listadoId" (click)="navigateRouter('listado')" *ngIf="token">
           Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
       </li>
     </ul>
@@ -23,11 +23,11 @@
 
   <div class="menu-nav-mobile" *ngIf="viewButton === true">
     <ul>
-      <li id="homeId" [routerLink]="['/']">Home</li>
-      <li id="inicioId" [routerLink]="['/inicio']">Inicio</li>
-      <li id="beneficiosId" [routerLink]="['/beneficios']">Beneficios</li>
-      <li id="registerId" [routerLink]="['/register']" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-      <li id="listadoId" [routerLink]="['/listado']" *ngIf="token">
+      <li id="homeId" (click)="navigateRouter('home')">Home</li>
+      <li id="inicioId" (click)="navigateRouter('inicio')">Inicio</li>
+      <li id="beneficiosId" (click)="navigateRouter('beneficios')">Beneficios</li>
+      <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li id="listadoId" (click)="navigateRouter('listado')" *ngIf="token">
         Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
       </li>
     </ul>
