@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'inicio-component',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  url: string = ''
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.url = this.router.url;
   }
 
 }
