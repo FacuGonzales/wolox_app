@@ -42,7 +42,7 @@ export class NavComponent implements OnInit {
   }
 
   navigateRouter(value){
-    this.router.navigate(['/'+ value], { fragment: value });
+    this.router.navigate(['/'], { fragment: value });
   }
 
 }
