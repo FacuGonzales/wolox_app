@@ -12,98 +12,95 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 1300px) {
-    html{
-        font-size: 50%;
-    }
+  html {
+    font-size: 50%;
+  }
 }
 @media only screen and (max-width: 1050px) {
-    html{
-        font-size: 40%;
-    }
+  html {
+    font-size: 40%;
+  }
 }
 @media only screen and (max-width: 850px) {
-    html{
-        font-size: 35%;
-    }
+  html {
+    font-size: 35%;
+  }
 }
 @media only screen and (max-width: 768px) {
-    html{
-        font-size: 60%;
-    }
-  
+  html {
+    font-size: 60%;
+  }
 }
 @media only screen and (max-width: 600px) {
-    html{
-        font-size: 50%;
-    }
+  html {
+    font-size: 50%;
+  }
 }
 @media only screen and (max-width: 500px) {
-    html{
-        font-size: 40%;
-    } 
+  html {
+    font-size: 40%;
+  }
 }
 @media only screen and (max-width: 400px) {
-    html{
-        font-size: 30%;
-    } 
+  html {
+    font-size: 30%;
+  }
 }
-
 
 body {
-    /* background-image: url(./assets/Backgrounds/Bg_Header.png); */
-    font-weight: 300;
-    line-height: 1.6;
+  /* background-image: url(./assets/Backgrounds/Bg_Header.png); */
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-
-.button-container{
-    margin: 0 auto;
+.button-container {
+  margin: 0 auto;
 }
 
-.button-container a{
-    text-decoration: none;
+.button-container a {
+  text-decoration: none;
 }
 
-button{
-    font-family: MontserratSemiBold;
-    font-size: 1.7rem;
-    cursor: pointer;
-    outline: none;
-    font-weight: 700;
-    width: fit-content;
-    height: fit-content;
-    padding: 1rem 7rem ;
-    color: #2aa7df ;
-    border: 1px solid #2aa7df;
-    border-radius: 40px;
-    background-color: white;
-    transition: background-color 0.2s;
-    display: block ;
-  
+button {
+  font-family: MontserratSemiBold;
+  font-size: 1.7rem;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 7rem;
+  color: #2aa7df;
+  border: 1px solid #2aa7df;
+  border-radius: 40px;
+  background-color: white;
+  transition: background-color 0.2s;
+  display: block;
 }
 
 button:hover {
-    background-color: #2aa7df;
-    color: white ;
+  background-color: #2aa7df;
+  color: white;
 }
 
 .bg-transparent {
-    border: 2px solid #2aa7df;
-    background-color: transparent;
-    color: white;
+  border: 2px solid #2aa7df;
+  background-color: transparent;
+  color: white;
 }
 
-.bold{
-    font-weight: bold;
+.bold {
+  font-weight: bold;
 }
 
-.color_azul{
-    color: #2aa7df ;
+.color_azul {
+  color: #2aa7df;
 }
 
-.color_verde{
-    color: #a3cc39;
+.color_verde {
+  color: #a3cc39;
 }
