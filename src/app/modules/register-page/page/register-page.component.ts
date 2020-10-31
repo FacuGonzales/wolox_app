@@ -25,8 +25,6 @@ export class RegisterPageComponent implements OnInit {
   provincias: string[] = [];
   codigoNac: string;
 
-  submitted: boolean = false;
-
   regPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@#$%^&+=!_*-]{8,14}$/;
   regPassValid: boolean;
 
@@ -132,8 +130,6 @@ export class RegisterPageComponent implements OnInit {
   }
 
   enviar(){
-    this.submitted = true;
-
     if(this.registerForm.valid){
       this.loading=true
       this.errorForm = false;
