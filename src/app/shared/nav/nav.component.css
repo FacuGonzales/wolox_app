@@ -42,9 +42,23 @@
 }
 
 .menu-nav ul li:hover {
-  cursor: pointer;
+  cursor: pointer !important;
   color: #2aa7df;
   transition: 0.2s;
+}
+
+.menu-nav ul li span.liked-span {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 65px;
+  height: 33px;
+  border-radius: 50px;
+  background-color: #a3cc39;
+}
+
+.menu-nav ul li span.liked-span img {
+  width: 50%;
 }
 
 .button_loggin {
