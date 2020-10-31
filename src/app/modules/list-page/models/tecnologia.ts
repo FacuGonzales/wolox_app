@@ -6,6 +6,7 @@ export class Tecnologias {
     public license: string,
     public language: string,
     public type: string,
-    public logo: string
+    public logo: string,
+    public liked: boolean = false
   ){}
 }
