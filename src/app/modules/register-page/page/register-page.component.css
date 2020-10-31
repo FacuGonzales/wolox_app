@@ -1,233 +1,241 @@
-@import '../../../../assets/Fonts/fonts.css';
+@import "../../../../assets/Fonts/fonts.css";
 
-.register-container{
-    background-image: url("../../../../assets/Backgrounds/Bg_Footer.png");
-    background-size: contain;
-    background-position: center;
+.register-container {
+  background-image: url("../../../../assets/Backgrounds/Bg_Footer.png");
+  background-size: contain;
+  background-position: center;
 
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 900px) {
-    .register-container{
-        grid-template-columns: 100%;
-    }
+  .register-container {
+    grid-template-columns: 100%;
+  }
 }
 
-.formulario-container{
-    margin: 50px auto;
-    width: 50%; /*50%;*/
-    font-family: MontserratRegular;
+.formulario-container {
+  margin: 50px auto;
+  width: 50%; /*50%;*/
+  font-family: MontserratRegular;
 }
 
 @media only screen and (max-width: 1200px) {
-    .formulario-container{
-        width: 60%;
-    }
+  .formulario-container {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .formulario-container{
-        width: 70%;
-    }
+  .formulario-container {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 600px) {
-    .formulario-container{
-        width: 80%;
-    }
+  .formulario-container {
+    width: 80%;
+  }
 }
 
-.formulario-container .form-container h1{
-    width: fit-content;
-    margin: 20px auto;
-    padding: 10px 0px;
-    /* agregado */
-    border-top: 1px solid #2aa7df;
-    border-bottom: 1px solid #a3cc39;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
+.formulario-container .form-container h1 {
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 0px;
+  /* agregado */
+  border-top: 1px solid #2aa7df;
+  border-bottom: 1px solid #a3cc39;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 900px) {
-    .formulario-container .form-container h1{
-        font-size: 20px;
-    }
+  .formulario-container .form-container h1 {
+    font-size: 20px;
+  }
 }
 
-.input-container label{
-    margin-bottom: 15px;
-    color: #2aa7df;
-    font-family: MontserratBold;
-    font-size: 15px;
+.input-container label {
+  margin-bottom: 15px;
+  color: #2aa7df;
+  font-family: MontserratBold;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 600px) {
-    .input-container label{
-        font-size: 11.66px;
-    }
+  .input-container label {
+    font-size: 11.66px;
+  }
 }
 
 .input-container input,
-.input-container select{
-    outline: none;
-    font-size: 15px;
-    padding: 10px;
-    border: 1px solid #2aa7df;
-    border-radius: 5px;
-    width: 100%;
-    display: block;
-    transition: all 0.3s;
-    margin-bottom: 20px;
+.input-container select {
+  outline: none;
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid #2aa7df;
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+  transition: all 0.3s;
+  margin-bottom: 10px; /*20px*/
 }
 
 .input-container input:focus {
-    border-bottom: 2px solid #2aa7df;
-    background-color: #2aa6df42;
-}
-
-
-@media only screen and (max-width: 600px) {
-    .input-container input{
-        font-size: 14px;
-    }
-}
-
-.numero-container{
-    display: flex;
-    
+  border-bottom: 2px solid #2aa7df;
+  background-color: #2aa6df42;
 }
 
 @media only screen and (max-width: 600px) {
-    .numero-container{
-        grid-template-columns: 25% 108%;
-    }
+  .input-container input {
+    font-size: 14px;
+  }
 }
 
-.nac-container{
-    height: fit-content;
-    padding: 7px 0px;
-    width: 10%;
-    text-align: center;
+.numero-container {
+  display: flex;
 }
 
 @media only screen and (max-width: 600px) {
-    .nac-container{
-        display: none;
-
-    }
+  .numero-container {
+    grid-template-columns: 25% 108%;
+  }
 }
 
-.nac-container span.bandera{
-    width: 10%;
-}
-
-.nac-container span.bandera img{
-    
-    width: 40px;
-    
-}
-
-input.codigo{
-    width: 10% !important;
+.nac-container {
+  height: fit-content;
+  padding: 7px 0px;
+  width: 10%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
-    input.codigo{
-        width: 20% !important;
-    }
+  .nac-container {
+    display: none;
+  }
 }
 
-input.telefono{
-    width: 85% !important;
+.nac-container span.bandera {
+  width: 10%;
+}
+
+.nac-container span.bandera img {
+  width: 40px;
+}
+
+input.codigo {
+  width: 10% !important;
 }
 
 @media only screen and (max-width: 600px) {
-    .input-container input{
-        font-size: 14px;
-    }
+  input.codigo {
+    width: 20% !important;
+  }
 }
 
-.combo_input{
-    display: grid;
-    grid-template-columns: 50% 50%;
+input.telefono {
+  width: 85% !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-container input {
+    font-size: 14px;
+  }
+}
+
+.combo_input {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .combo_input .combo_izq,
-.combo_input .combo_der{
-    width: 95%;
+.combo_input .combo_der {
+  width: 95%;
 }
 
-.combo_input .combo_der{
-    margin-left: 15px;
+.combo_input .combo_der {
+  margin-left: 15px;
 }
 
 @media only screen and (max-width: 600px) {
-    .combo_input .combo_der{
-        margin-left: 10px;
-    }
-}
-
-.combo_check{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.combo_check input.check{
-    width: 2rem!important;
-    height: 5rem;
-    padding: 0px !important;
-    margin-bottom: 0px !important;
-}
-
-.combo_check a{
-    font-size: 15px;
-    font-style: none !important;
-    text-decoration: none;
-    color: #000;
+  .combo_input .combo_der {
     margin-left: 10px;
-    cursor: pointer;
+  }
 }
 
-
-.error{
-    margin-bottom: 10px;
-    color: red;
-    font-family: MontserratBold;
-    font-size: 12px;
+.combo_check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.formInvalid{
-    font-size: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 15px;
+.combo_check input.check {
+  width: 2rem !important;
+  height: 5rem;
+  padding: 0px !important;
+  margin-bottom: 0px !important;
 }
-  
+
+.combo_check a {
+  font-size: 15px;
+  font-style: none !important;
+  text-decoration: none;
+  color: #000;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.error {
+  margin-bottom: 10px;
+  color: red;
+  font-family: MontserratBold;
+  font-size: 12px;
+}
+
+input.error_input,
+select.error_input {
+  background-color: #f73e3e5e !important;
+  border-bottom: 3px solid red !important;
+  border: 1px solid red !important;
+}
+
+.formInvalid {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
-    .error{
-        font-size: 9.66px;
-    }
+  .error {
+    font-size: 9.66px;
+  }
 }
 
-.button-container{
-    justify-content: center;
-    display: flex;
+.button-container {
+  justify-content: center;
+  display: flex;
 }
 
-.back_home{
-    width: 100%;
-    margin: 20px 0px;
-    display: flex;
+.button-container button:disabled {
+  background-color: #2aa7df;
+  opacity: 0.4;
+  color: #000;
+  cursor: no-drop;
 }
 
-.back_home a{
-    margin: 0px auto;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
+.back_home {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+}
+
+.back_home a {
+  margin: 0px auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 }
