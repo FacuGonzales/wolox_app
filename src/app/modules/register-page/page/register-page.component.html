@@ -13,67 +13,82 @@
           <input  type="text" 
                   placeholder="Nombre" 
                   autocomplete="off"
-                  name="nombre" 
                   required
+                  [ngClass]="{'error_input':(f.nombre.hasError('required') && f.nombre.touched) || (f.nombre.invalid && f.nombre.touched)}"
                   formControlName="nombre"
                   id="nombreId">
 
-          <p class="error" *ngIf="submitted && f.nombre.hasError('required')">El campo Nombre es requerido</p>
-          <p class="error" *ngIf="submitted && f.nombre.hasError('minlength')">Debe tener minimo 3 caracteres</p>
-          <p class="error" *ngIf="submitted && f.nombre.hasError('maxlength')">Debe tener máximo 30 caracteres</p>
+          <p class="error" *ngIf="f.nombre.hasError('required') && f.nombre.touched">El campo Nombre es requerido</p>
+          <p class="error" *ngIf="f.nombre.hasError('minlength')">Debe tener minimo 3 caracteres</p>
+          <p class="error" *ngIf="f.nombre.hasError('maxlength')">Debe tener máximo 30 caracteres</p>
         </div>
+
 
         <div class="input-container">
           <label for="apellido">Apellido</label>
           <input  type="text" 
                   placeholder="Apellido" 
                   autocomplete="off" 
-                  name="apellido" 
+                  [ngClass]="{'error_input':(f.apellido.hasError('required') && f.apellido.touched) || (f.apellido.invalid && f.apellido.touched)}"
                   formControlName="apellido"
                   id="apellidoId">
 
-          <p class="error" *ngIf="submitted && f.apellido.hasError('required')">El campo apellido es requerido</p>
-          <p class="error" *ngIf="submitted && f.apellido.hasError('minlength')">Debe tener minimo 3 caracteres</p>
-          <p class="error" *ngIf="submitted && f.apellido.hasError('maxlength')">Debe tener máximo 30 caracteres</p>   
+          <p class="error" *ngIf="f.apellido.hasError('required') && f.apellido.touched">El campo apellido es requerido</p>
+          <p class="error" *ngIf="f.apellido.hasError('minlength')">Debe tener minimo 3 caracteres</p>
+          <p class="error" *ngIf="f.apellido.hasError('maxlength')">Debe tener máximo 30 caracteres</p>   
         </div>
 
+
         <div class="input-container combo_input">
+
           <div class="combo_izq">
               <label for="pais">País</label>
-              <select name="pais" formControlName="pais" (ngModelChange)="changePais($event)" id="paisId">
-                  <option value="" disabled>--Seleccionar--</option>
-                  <option *ngFor="let item of paises">{{item}}</option>
+              <select formControlName="pais" 
+                      (ngModelChange)="changePais($event)" 
+                      [ngClass]="{'error_input':(f.pais.hasError('required') && f.pais.touched) || (f.pais.invalid && f.pais.touched)}"
+                      id="paisId">
+
+                <option value="" disabled>--Seleccionar--</option>
+                <option *ngFor="let item of paises">{{item}}</option>
               </select>
 
-              <p class="error" *ngIf="submitted && f.pais.hasError('required')">El pais es requerido</p>
+              <p class="error" *ngIf="f.pais.hasError('required') && f.pais.touched">El pais es requerido</p>
           </div>
+
 
           <div class="combo_der">
               <label for="provincia">Provincia</label>
-              <select name="provincia" formControlName="provincia" id="provinciaId">
+              <select formControlName="provincia" 
+                      [ngClass]="{'error_input':(f.provincia.hasError('required') && f.provincia.touched) || (f.provincia.invalid && f.provincia.touched)}"
+                      id="provinciaId">
+
                   <option value="" disabled>--Seleccionar--</option>
 
                   <option *ngFor="let item of provincias">{{item}}</option>
               </select>
 
-              <p class="error" *ngIf="submitted && f.provincia.hasError('required')">La provincia es requerido</p>
+              <p class="error" *ngIf="f.provincia.hasError('required') && f.provincia.touched">La provincia es requerido</p>
           </div>
+
         </div>
+
 
         <div class="input-container">
           <label for="email">Email</label>
           <input  type="email" 
                   placeholder="Email" 
                   autocomplete="off" 
-                  name="email" 
                   id="emailId"
+                  [ngClass]="{'error_input':(f.email.hasError('required') && f.email.touched) || (f.email.invalid && f.email.touched)}"
                   formControlName="email">
 
-          <p class="error" *ngIf="submitted && f.email.hasError('required')">El email es requerido</p>
-          <p class="error" *ngIf="submitted && f.email.hasError('email')">El mail no tiene un formato válido.</p> 
+          <p class="error" *ngIf="f.email.hasError('required') && f.email.touched">El email es requerido</p>
+          <p class="error" *ngIf="f.email.hasError('email')">El mail no tiene un formato válido.</p> 
         </div>
 
+
         <div class="input-container">
+
           <label for="telefono">Télefono</label>
           <div class="numero-container">
             <div class="nac-container">
@@ -92,14 +107,15 @@
                     placeholder="Télefono" 
                     autocomplete="off" 
                     class="telefono"
-                    name="telefono" 
                     id="telefonoId"
+                    [ngClass]="{'error_input':(f.telefono.hasError('required') && f.telefono.touched) || (f.telefono.invalid && f.telefono.touched)}"
                     formControlName="telefono">
           </div>
 
-          <p class="error" *ngIf="submitted && f.telefono.hasError('required')">El telefono es requerido</p>
-          <p class="error" *ngIf="submitted && f.telefono.hasError('maxlength')">Debe tener máximo 10 caracteres</p>
+          <p class="error" *ngIf="f.telefono.hasError('required') && f.email.touched">El telefono es requerido</p>
+          <p class="error" *ngIf="f.telefono.hasError('maxlength')">Debe tener máximo 10 caracteres</p>
         </div>
+
 
         <div class="input-container combo_input">
           <div class="combo_izq">
@@ -107,13 +123,18 @@
             <input  type="password" 
                     placeholder="Contraseña" 
                     autocomplete="off" 
-                    name="password"
                     id="passwordId"
+                    [ngClass]="{'error_input':(f.password.hasError('required') && f.password.touched) || (f.password.invalid && f.password.touched)}"
                     (ngModelChange)="validarPassword($event)"
                     formControlName="password">
 
-            <p class="error" *ngIf="submitted && f.password.hasError('required')">La contrseña es requerido</p>
-            <p class="error" *ngIf="regPassValid == false && passwordValid == false && minLenghtPass == false">La contraseña no es válida (Debe ser minimo 6 caracteres, alfanumerica).</p>
+            <p class="error" *ngIf="f.password.hasError('required') && f.password.touched">La contrseña es requerido</p>
+            <p class="error" *ngIf="regPassValid == false && 
+                                    passwordValid == false && 
+                                    minLenghtPass == false && 
+                                    f.password.hasError('required') == false">
+                La contraseña no es válida (Debe ser minimo 6 caracteres, alfanumerica).
+            </p>
           </div>
 
           <div class="combo_der">
@@ -121,12 +142,12 @@
             <input  type="password" 
                     placeholder="Repetir Contraseña" 
                     autocomplete="off" 
-                    name="repeatPassword" 
                     id="rpPasswordId"
+                    [ngClass]="{'error_input':(f.repeatPassword.hasError('required') && f.repeatPassword.touched) || (f.repeatPassword.invalid && f.repeatPassword.touched)}"
                     (ngModelChange)="validarRepeatPass($event)"
                     formControlName="repeatPassword">
             
-            <p class="error" *ngIf="submitted && f.repeatPassword.hasError('required')">Debe repetir la contraseña</p>
+            <p class="error" *ngIf="f.repeatPassword.hasError('required') && f.password.touched">Debe repetir la contraseña</p>
             <p class="error" *ngIf="repeatPasswordValid == false">Las contraseñas ingresadas no coinciden.</p>
           </div>
         </div>
@@ -136,14 +157,20 @@
             <input type="checkbox" formControlName="terminosYcondiciones" class="check" id="checkId">
             <a href="https://terminosycondicionesdeusoejemplo.com/" target="_blank">Acepto términos y condiciones</a>
           </div>
-          <p class="error" *ngIf="submitted && f.terminosYcondiciones.hasError('required')">Debe aceptar terminos y condiciones</p>
+          <p class="error" *ngIf="f.terminosYcondiciones.hasError('required') && f.terminosYcondiciones.touched">Debe aceptar terminos y condiciones</p>
         </div>
 
         <div class="confir-container">
           <div class="button-container">
-            <button type="submit" class="button-conocer-mas" (click)="enviar()" id="buttonEnviar">ENVÍAR</button>
+            <button type="submit" 
+                    
+                    class="button-conocer-mas" 
+                    [disabled]="registerForm.invalid" 
+                    (click)="enviar()" id="buttonEnviar">
+                ENVÍAR
+            </button>
           </div>
-
+          
           <div class="back_home">
             <a (click)="atras()">Regresar a pantalla inicial</a>
           </div>
