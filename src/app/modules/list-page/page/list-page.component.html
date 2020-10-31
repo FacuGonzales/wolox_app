@@ -32,7 +32,13 @@
           <p>{{item.license}}</p>
           <p>{{item.language}}</p>
           <p>{{item.type}}</p>
-          <p id="buttonLikeId" (click)="liked(item.tech)">Button Like</p>
+          <span class="liked-span" *ngIf="item.liked == false">
+            <img src="../../../../assets/icons/like_blue.png" (click)="liked(item.tech)">
+          </span>
+          <span class="liked-span" *ngIf="item.liked == true">
+            <img src="../../../../assets/icons/dislike_green.png" (click)="liked(item.tech)">
+          </span>
+          <!-- <p id="buttonLikeId" (click)="liked(item.tech)">Button Like</p> -->
         </div>
       </div>
     </div>

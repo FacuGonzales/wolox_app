@@ -29,7 +29,6 @@ export class ListPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerLista();
-    this.obtenerLiked();
     this.formSubscribes();
   }
 
@@ -41,13 +40,15 @@ export class ListPageComponent implements OnInit {
     this.loading = true;
 
     this.subscribes.push(this.tecnologiasData.obtenerTodos().subscribe(
-      resultado => {
+      (resultado: Tecnologias[]) => {
 
         if(resultado){
           this.loading = false;
+
           this._tecnObtenidas = resultado;
-          this._listadoFiltrado = this._tecnObtenidas;
-          this._tecnologiasVisibles = this._listadoFiltrado.length;
+
+          this.obtenerLikeds(this._tecnObtenidas);
+
         }else{
           this.loading=false
           this.tError = true;
@@ -65,6 +66,39 @@ export class ListPageComponent implements OnInit {
       }
     ))
   }
+
+  obtenerLikeds(techsObtenidas: Tecnologias[]){
+    let _localStorage = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
+    if(_localStorage == null){
+      _localStorage = [];
+    }
+
+    this.techLiked = _localStorage;
+    this.cantidadLike = this.techLiked?.length; 
+
+    techsObtenidas.forEach(r => r.liked = false)
+
+    // Recorro todos los elementos que haya en techLiekd
+    this.techLiked.forEach( t => {
+      // Recorro todos los elementos que hata detro de resultado
+      techsObtenidas.forEach( r => {
+        // Compruebo si existe alguno igual
+
+        if(t == r.tech){
+          // Si hay, coloco su propiedad liked en true
+          r.liked = true;  
+        }
+      });
+
+    })
+    this.completarListado(techsObtenidas)
+  }
+
+  completarListado(techsObtenidas: Tecnologias[]){
+    this._listadoFiltrado = techsObtenidas;
+    this._tecnologiasVisibles = this._listadoFiltrado.length;
+  }
+
 
   filter(value){
     let listaActualziada = this._tecnObtenidas;
@@ -120,16 +154,7 @@ export class ListPageComponent implements OnInit {
     )
   }
 
-  obtenerLiked(){
-    let _localStorage = JSON.parse(localStorage.getItem('tecnologías-favoritas'));
-    if(_localStorage == null){
-      _localStorage = [];
-    }
-
-    this.techLiked = _localStorage;
-    this.cantidadLike = this.techLiked?.length; 
-  }
-
+  
   liked(value){
     let index = this.techLiked.findIndex(e => e == value);
     if(index >= 0){
@@ -141,5 +166,6 @@ export class ListPageComponent implements OnInit {
     this.cantidadLike = this.techLiked?.length;
 
     localStorage.setItem('tecnologías-favoritas', JSON.stringify(this.techLiked));
+    this.obtenerLikeds(this._tecnObtenidas);
   }
 }
