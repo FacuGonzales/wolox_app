@@ -9,13 +9,13 @@ const routes: Routes = [
     path: '', component: LandingPageComponent,
     children: [
       {
-        path: 'home', component: LandingPageComponent
+        path: '', component: LandingPageComponent
       },
       {
-        path: 'inicio', component: InicioComponent
+        path: '', component: InicioComponent
       },
       {
-        path: 'beneficios', component: BeneficiosComponent
+        path: '', component: BeneficiosComponent
       }
     ]
   },
