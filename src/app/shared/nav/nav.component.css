@@ -51,14 +51,11 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 65px;
-  height: 33px;
-  border-radius: 50px;
-  background-color: #a3cc39;
 }
 
 .menu-nav ul li span.liked-span img {
-  width: 50%;
+  width: 25px;
+  margin-left: 15px;
 }
 
 .button_loggin {
@@ -164,29 +161,38 @@
   font-size: 4rem;
   font-family: MontserratSemiBold;
   background-image: url("../../../assets/Backgrounds/Bg_Mobile.png"),
-    linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    linear-gradient(0deg, rgb(54, 54, 54) 0%, rgba(54, 54, 54, 1) 100%);
   background-size: contain;
   background-position: center;
-
+  /* background: rgba(0, 0, 0, 0.6); */
   top: 0;
   left: 0;
-  font-size: 8rem;
+  font-size: 5rem;
+  color: #ffffff;
 }
 
 .menu-nav-mobile ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
   height: 100%;
+  padding-top: 25%;
   align-items: center;
+}
+
+.menu-nav-mobile ul li {
+  margin-bottom: 30px;
 }
 
 .menu-nav-mobile ul li:hover {
   color: #2aa7df;
   transition: 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-nav-mobile ul li span.liked-span img {
+    width: 40px;
+    margin-left: 5px;
+  }
 }
