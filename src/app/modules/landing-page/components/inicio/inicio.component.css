@@ -1,126 +1,123 @@
-@import '../../../../../assets/Fonts/fonts.css';
+@import "../../../../../assets/Fonts/fonts.css";
 
-.inicio-container{
-    display: flex;
-    height: fit-content;
+.inicio-container {
+  display: flex;
+  height: fit-content;
 }
 
 @media only screen and (max-width: 768px) {
-    .inicio-container{
-        display: grid;
-        grid-template-columns: 100%;
-    }
+  .inicio-container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
 
-.inicio-container-izq{
-    width: 56%;
-    position: relative;
+.inicio-container-izq {
+  width: 56%;
+  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
-    .inicio-container-izq{
-        width: 100%;
-    }
+  .inicio-container-izq {
+    width: 100%;
+  }
 }
 
 .inicio-container-izq > img {
-    width: 100%;
+  width: 100%;
 }
 
 .text-red-container {
-    height: 50%;
-    width: fit-content;
-    font-family: MontserratBold;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: space-around;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  height: 50%;
+  width: fit-content;
+  font-family: MontserratBold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 p.woloxer-container {
-    font-size: 6rem
+  font-size: 6rem;
 }
 
-p.woloxer-container .w-number{
-    color: #a3cc39
+p.woloxer-container .w-number {
+  color: #a3cc39;
 }
 
-p.woloxer-container .w-text{
-    color: #2aa7df
+p.woloxer-container .w-text {
+  color: #2aa7df;
 }
 
-.twitter-container{
-    width: fit-content;
-    margin: 0 auto;
-    font-family: MontserratRegular;
-    font-size: 2rem;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: repeat(5, 20%);
+.twitter-container {
+  width: fit-content;
+  margin: 0 auto;
+  font-family: MontserratRegular;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(5, 20%);
 }
 
-.logo-twitter{
-    text-align: right;
-    grid-row: 1/-1;
+.logo-twitter {
+  text-align: right;
+  grid-row: 1/-1;
 }
 
-.logo-twitter img{
-    width: 4rem;
+.logo-twitter img {
+  width: 4rem;
 }
 
-.user_wolox{
-    grid-row: 2/-1;
+.user_wolox {
+  grid-row: 2/-1;
 }
 
-
-
-.inicio-container-der{
-    background-color: #f2f5fa;
-    width: 44%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.inicio-container-der {
+  background-color: #f2f5fa;
+  width: 44%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 768px) {
-    .inicio-container-der{
-        height: fit-content;
-        padding: 15% 0;
-        width: 100%;
-    }
+  .inicio-container-der {
+    height: fit-content;
+    padding: 15% 0;
+    width: 100%;
+  }
 }
 
-.texto-container{
-    height: 36%;
-    width: 63%;
-    display: flex;
-    flex-direction: column;
-    font-family: MontserratSemiBold;
-    font-size: 4rem;
+.texto-container {
+  height: 36%;
+  width: 63%;
+  display: flex;
+  flex-direction: column;
+  font-family: MontserratSemiBold;
+  font-size: 3.7rem;
 }
 
-.texto-container p.texto_1{
-    margin: 0 auto;
+.texto-container p.texto_1 {
+  margin: 0 auto;
 }
 
-.texto-container p.texto_2{
-    margin: 0 auto;
+.texto-container p.texto_2 {
+  margin: 0 auto;
 }
 
-.texto-container p.texto_3{
-    margin: 0 auto;
+.texto-container p.texto_3 {
+  margin: 0 auto;
 }
 
-p.texto_2 span.color_azul{
-    color: #2aa7df
+p.texto_2 span.color_azul {
+  color: #2aa7df;
 }
 
-p.texto_2 span.color_verde{
-    color: #a3cc39
+p.texto_2 span.color_verde {
+  color: #a3cc39;
 }
-
