@@ -120,4 +120,5 @@ button:hover {
   font-family: MontserratSemiBold;
   font-size: 1.5rem;
   color: #000;
+  z-index: 999;
 }
