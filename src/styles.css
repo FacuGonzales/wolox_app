@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/Fonts/fonts.css";
 
 *,
 *::before,
@@ -102,4 +103,21 @@ button:hover {
 
 .color_verde {
   color: #a3cc39;
+}
+
+.selectLang {
+  outline: none;
+  position: fixed;
+  padding: 15px 15px 15px 10px;
+  left: 0;
+  bottom: 50px;
+  background-color: #2aa7df;
+  border-radius: 0 40px 40px 0;
+  border: 2px solid #007ab1;
+  cursor: pointer;
+  width: fit-content !important;
+  height: fit-content !important;
+  font-family: MontserratSemiBold;
+  font-size: 1.5rem;
+  color: #000;
 }
