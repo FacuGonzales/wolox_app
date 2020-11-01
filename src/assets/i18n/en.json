@@ -1,0 +1,45 @@
+
+{
+    "nav" : {
+        "li_uno" : "Home",
+        "li_dos" : "Benefits",
+        "li_tres" : "Signup",
+        "li_cuatro" : "List"
+    },
+
+    "home" : {
+        "etiqueta_p_uno" : "Welcome to your",
+        "etiqueta_p_sapan" : "technical interview",
+        "etiqueta_p_dos" : "at",
+        "etiqueta_p_span_dos" : "wolox"
+    },
+
+    "inicio" : {
+        "boton_siguenos" : "Follow us",
+        "linea_uno" : "We work for",
+        "linea_dos" : "turn ideas",
+        "linea_tres" : "into",
+        "linea_cuatro" : "productos"
+    },
+
+    "beneficios" : {
+        "title" : "Among the benefits we offer are",
+        "ben_uno" : "Flexibility Time",
+        "ben_dos" : "Home Office",
+        "ben_tres_sub_uno" : "Training",
+        "ben_tres_sub_dos" : "& Workshops",
+        "ben_cautro_sub_uno" : "Snacks, fruits",
+        "ben_cautro_sub_dos" : "& free drinks",
+        "ben_cinco" : "Remote Week",
+        "ben_seis_sub_uno" : "Working",
+        "ben_seis_sub_dos" : "on latest",
+        "ben_seis_sub_tres" : "technologies"
+    },
+
+    "footer" : {
+        "linea_uno_sub_uno" : "Thanks for",
+        "linea_uno_sub_dos" : "completing the exercise",
+        "linea_dos" : "We invite you to see more information",
+        "button" : "Learn more"
+    }
+}
