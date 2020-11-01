@@ -18,35 +18,42 @@
     </div>
   </div>
 
-  <div class="list-container" >
-      
+  <div class="list-container">
+
     <div class="item-container" *ngFor="let item of _listadoFiltrado" id="{{item.tech}}Id">
-      <div class="item-wrap">
-        <img src="{{ item.logo }}" class="img-fluid">
-
-        <div class="info-tec-container">
-          <h4>{{item.tech}}</h4>
-
-          <p>{{item.year}}</p>
-          <p>{{item.author}}</p>
-          <p>{{item.license}}</p>
-          <p>{{item.language}}</p>
-          <p>{{item.type}}</p>
-          <span class="liked-span" *ngIf="item.liked == false">
-            <img src="../../../../assets/icons/like_blue.png" (click)="liked(item.tech)">
-          </span>
-          <span class="liked-span" *ngIf="item.liked == true">
-            <img src="../../../../assets/icons/dislike_green.png" (click)="liked(item.tech)">
-          </span>
-          <!-- <p id="buttonLikeId" (click)="liked(item.tech)">Button Like</p> -->
-        </div>
-      </div>
-    </div>
       
+        <div class="img-container">
+          <img src="{{ item.logo }}" class="item-logo">
+        </div>
+    
+        <div class="info-container">
+          <div class="title-tech-container">
+            <h4>{{item.tech}}</h4>
+          </div>
+    
+          <div class="info-tech-container">
+            <p>{{item.year}}</p>
+            <p>{{item.author}}</p>
+            <p>{{item.license}}</p>
+            <p>{{item.language}}</p>
+            <p>{{item.type}}</p>
+          </div>
+  
+          <div class="liked-span" *ngIf="item.liked == false">
+            <img src="../../../../assets/icons/like_blue.png" (click)="liked(item.tech)">
+          </div>
+  
+          <div class="liked-span" *ngIf="item.liked == true">
+            <img src="../../../../assets/icons/dislike_green.png" (click)="liked(item.tech)">
+          </div>
+        </div>
+  
+    </div>
+
   </div>
 
-  <div>
-    <p>Se visualizan {{_tecnologiasVisibles}} de {{_tecnObtenidas.length}} tecnolgías disponibles</p>
+  <div class="cantidad-container">
+    <p class="cantidad-tech">Se visualizan {{_tecnologiasVisibles}} de {{_tecnObtenidas.length}} tecnolgías disponibles</p>
   </div>
 </div>
 
