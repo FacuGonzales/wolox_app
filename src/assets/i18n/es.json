@@ -1,0 +1,46 @@
+
+{
+    "nav" : {
+        "li_uno" : "Inicio",
+        "li_dos" : "Beneficios",
+        "li_tres" : "Regístrate",
+        "li_cuatro" : "Listado"
+    },
+
+    "home" : {
+        "etiqueta_p_uno" : "Bienvenido a tu",
+        "etiqueta_p_sapan" : "Entrevista Técnica",
+        "etiqueta_p_dos" : "en",
+        "etiqueta_p_span_dos" : "wolox"
+    },
+
+    "inicio" : {
+        "boton_siguenos" : "Siguenos",
+        "linea_uno" : "Trabajamos para",
+        "linea_dos_azul" : "convertir",
+        "linea_dos_verde" : "ideas",
+        "linea_tres" : "en",
+        "linea_cuatro" : "productos"
+    },
+
+    "beneficios" : {
+        "title" : "Entre los beneficios que ofrecemos se encuentran",
+        "ben_uno" : "Flexibilidad Horaria",
+        "ben_dos" : "Home Office",
+        "ben_tres_sub_uno" : "Capacitaciones",
+        "ben_tres_sub_dos" : "y Workshops",
+        "ben_cautro_sub_uno" : "Snacks, frutas",
+        "ben_cautro_sub_dos" : "y bebidas gratis",
+        "ben_cinco" : "Semana Remota",
+        "ben_seis_sub_uno" : "Trabajar",
+        "ben_seis_sub_dos" : "en ultimas",
+        "ben_seis_sub_tres" : "tecnologías"
+    },
+
+    "footer" : {
+        "linea_uno_sub_uno" : "Gracias por",
+        "linea_uno_sub_dos" : "completar el ejercicio",
+        "linea_dos" : "Te invitamos a ver más información",
+        "button" : "Conocer más"
+    }
+}
