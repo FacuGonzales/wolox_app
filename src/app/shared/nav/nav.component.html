@@ -6,11 +6,11 @@
 
   <div class="menu-nav">
     <ul class="menu-ul-nav">
-      <li id="inicioId" (click)="navigateRouter('inicio')">Inicio</li>
-      <li id="beneficiosId" (click)="navigateRouter('beneficios')">Beneficios</li>
-      <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+      <li id="inicioId" (click)="navigateRouter('inicio')">{{ 'nav.li_uno' | translate}}</li>
+      <li id="beneficiosId" (click)="navigateRouter('beneficios')">{{ 'nav.li_dos' | translate}}</li>
+      <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">{{ 'nav.li_tres' | translate}}</li>
       <li id="listadoId" (click)="navigateRouter('listado')" *ngIf="token">
-          Listado 
+        {{ 'nav.li_cuatro' | translate}} 
           <span class="liked-span" *ngIf="cantidadLike != 0">
             <img src="../../../../assets/icons/like_blue.png">
             {{cantidadLike}}
@@ -29,11 +29,11 @@
     <!-- <div class="opacity-container"> -->
       <ul>
         <li id="homeId" (click)="navigateRouter('home')">Home</li>
-        <li id="inicioId" (click)="navigateRouter('inicio')">Inicio</li>
-        <li id="beneficiosId" (click)="navigateRouter('beneficios')">Beneficios</li>
-        <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+        <li id="inicioId" (click)="navigateRouter('inicio')">{{ 'nav.li_uno' | translate}}</li>
+        <li id="beneficiosId" (click)="navigateRouter('beneficios')">{{ 'nav.li_dos' | translate}}</li>
+        <li id="registerId" (click)="navigateRouter('register')" *ngIf="!token">{{ 'nav.li_tres' | translate}}</li>
         <li id="listadoId" (click)="navigateRouter('listado')" *ngIf="token">
-          Listado 
+          {{ 'nav.li_cuatro' | translate}} 
           <span class="liked-span" *ngIf="cantidadLike != 0">
             <img src="../../../../assets/icons/like_blue.png">
             {{cantidadLike}}
