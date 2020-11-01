@@ -19,7 +19,6 @@
                   id="nombreId">
 
           <p class="error" *ngIf="f.nombre.hasError('required') && f.nombre.touched">El campo Nombre es requerido</p>
-          <p class="error" *ngIf="f.nombre.hasError('minlength')">Debe tener minimo 3 caracteres</p>
           <p class="error" *ngIf="f.nombre.hasError('maxlength')">Debe tener máximo 30 caracteres</p>
         </div>
 
@@ -34,7 +33,6 @@
                   id="apellidoId">
 
           <p class="error" *ngIf="f.apellido.hasError('required') && f.apellido.touched">El campo apellido es requerido</p>
-          <p class="error" *ngIf="f.apellido.hasError('minlength')">Debe tener minimo 3 caracteres</p>
           <p class="error" *ngIf="f.apellido.hasError('maxlength')">Debe tener máximo 30 caracteres</p>   
         </div>
 
