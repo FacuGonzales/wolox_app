@@ -16,6 +16,7 @@ verde a3cc39
 @media only screen and (max-width: 768px) {
   .list-page-container {
     background-image: url("/assets/Backgrounds/Bg_Footer.png@2x.png");
+    padding-top: 55px;
   }
 }
 
@@ -111,10 +112,6 @@ verde a3cc39
   background-color: #2aa7df;
 }
 
-.filter-container .buttons_filter #opc-flters li:active {
-  background-color: red;
-}
-
 .filter-container .buttons_filter #opc-flters li:last-child {
   margin-right: 0;
 }
@@ -122,38 +119,29 @@ verde a3cc39
 .list-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
-
-/* .list-container{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    justify-content: center;
-}
-
- */
 
 .item-container {
-  /* margin-bottom: 30px; */
-  margin: 30px 30px;
-  width: 20%;
-  height: 33vh;
-  cursor: pointer;
-}
-
-.item-wrap {
+  width: 290px;
+  height: 300px;
+  border: 1px solid #2aa7df;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
+  margin: 0px 20px 20px 20px;
 }
 
-.item-wrap::before {
+.item-container::before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 30px;
   right: 30px;
@@ -164,11 +152,29 @@ verde a3cc39
   opacity: 0;
 }
 
-.item-wrap .info-tec-container {
-  opacity: 0;
+.img-container {
+  width: 200px;
+  height: 150px;
+}
+
+.img-container:hover > .info-container {
+  display: block !important;
+}
+
+img.item-logo {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.info-container {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
+  display: none;
+
+  opacity: 0;
   right: 0;
   bottom: 0;
   text-align: center;
@@ -176,59 +182,34 @@ verde a3cc39
   transition: all ease-in-out 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  border: 5px solid #2aa7df;
+  height: 100%;
+  padding: 40px 0;
 }
 
-.item-wrap .info-tec-container::before {
+.item-container .info-container::before {
   display: block;
   content: "";
   width: 48px;
   height: 48px;
   position: absolute;
-  top: 35px;
-  left: 35px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
-.item-wrap .info-tec-container::after {
+.item-container .info-container::after {
   display: block;
   content: "";
   width: 48px;
   height: 48px;
   position: absolute;
-  bottom: 35px;
-  right: 35px;
-  border-bottom: 3px solid #fff;
-  border-right: 3px solid #fff;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
 
-.item-wrap .info-tec-container h4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.item-wrap .info-tec-container p {
-  color: #ffffff;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 0;
-  margin: 0;
-}
-
-/* p.description-proyect{
-    margin-top: 15px !important;
-    margin-bottom: 15px !important;
-    font-size: 10px !important;
-} */
-
-.item-wrap:hover::before {
+.item-container:hover::before {
   top: 0;
   left: 0;
   right: 0;
@@ -236,21 +217,54 @@ verde a3cc39
   opacity: 1;
 }
 
-.item-wrap:hover .info-tec-container {
+.item-container:hover .info-container {
   opacity: 1;
 }
 
-.item-wrap:hover .info-tec-container::before {
+.item-container:hover .info-container::before {
   top: 15px;
   left: 15px;
 }
 
-.item-wrap:hover .info-tec-container::after {
+.item-container:hover .info-container::after {
   bottom: 15px;
   right: 15px;
 }
 
-span.liked-span img {
-  width: 10%;
+.title-tech-container {
+  height: 100%;
+}
+
+.info-tech-container {
+  margin-bottom: 5px;
+}
+
+.info-container h4 {
+  color: #fff;
+  font-size: 25px;
+  border-bottom: 1px dashed #cccccc;
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.info-container p {
+  color: #fff;
+  font-size: 15px;
+  font-family: MontserratRegular;
+  margin-bottom: 10px;
+}
+
+div.liked-span img {
+  width: 12%;
   cursor: pointer;
+}
+
+.cantidad-container {
+  padding-bottom: 20px;
+}
+
+.cantidad-tech {
+  font-size: 15px;
+  font-family: MontserratRegular;
 }
