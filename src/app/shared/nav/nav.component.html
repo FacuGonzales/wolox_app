@@ -28,7 +28,6 @@
   <div class="menu-nav-mobile" *ngIf="viewButton === true">
     <!-- <div class="opacity-container"> -->
       <ul>
-        <li id="homeId" (click)="navigateRouter('home')">Home</li>
         <li id="inicioId" (click)="navigateRouter('inicio')">{{ 'nav.li_uno' | translate}}</li>
         <li id="beneficiosId" (click)="navigateRouter('beneficios')">{{ 'nav.li_dos' | translate}}</li>
         <li id="registerId" (click)="navigateRouter('register')" *ngIf="!token">{{ 'nav.li_tres' | translate}}</li>
