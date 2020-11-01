@@ -17,6 +17,8 @@
     background-size: contain;
     background-position: center;
     justify-content: center;
+    height: 200px;
+    padding: 30px 0px 30px 0px;
   }
 }
 
@@ -53,7 +55,7 @@ p.text_dos {
 }
 
 div.text_tres {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .button-conocer-mas {
@@ -83,4 +85,11 @@ img.text_cuatro {
   margin: 0 auto;
   margin-top: 80px;
   width: 8%;
+}
+
+@media only screen and (max-width: 768px) {
+  img.text_cuatro {
+    margin-top: 40px;
+    width: 16%;
+  }
 }
