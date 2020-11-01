@@ -10,9 +10,9 @@ export class AppComponent {
   lang: string[] = [];
 
   constructor(private translate: TranslateService){
-    this.translate.setDefaultLang('es');
-    this.translate.use('es');
-    this.translate.addLangs(['es', 'en']);
+    this.translate.setDefaultLang('ESP');
+    this.translate.use('ESP');
+    this.translate.addLangs(['ESP', 'ENG']);
     this.lang = this.translate.getLangs();
   }
 
