@@ -6,11 +6,13 @@ import { LoadingComponent } from './loading';
 import { NavComponent } from './nav';
 import { SuccessComponent } from './success';
 import { ErrorComponent } from './error';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    TranslateModule,
     SharedRoutingModule
   ],
   declarations: [
