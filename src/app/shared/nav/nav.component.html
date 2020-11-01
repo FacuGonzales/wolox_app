@@ -26,14 +26,20 @@
   </span>
 
   <div class="menu-nav-mobile" *ngIf="viewButton === true">
-    <ul>
-      <li id="homeId" (click)="navigateRouter('home')">Home</li>
-      <li id="inicioId" (click)="navigateRouter('inicio')">Inicio</li>
-      <li id="beneficiosId" (click)="navigateRouter('beneficios')">Beneficios</li>
-      <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
-      <li id="listadoId" (click)="navigateRouter('listado')" *ngIf="token">
-        Listado <span *ngIf="cantidadLike != 0"> - {{cantidadLike}}</span>
-      </li>
-    </ul>
+    <!-- <div class="opacity-container"> -->
+      <ul>
+        <li id="homeId" (click)="navigateRouter('home')">Home</li>
+        <li id="inicioId" (click)="navigateRouter('inicio')">Inicio</li>
+        <li id="beneficiosId" (click)="navigateRouter('beneficios')">Beneficios</li>
+        <li id="registerId" (click)="navigateRouter('register')" class="button_loggin bg-transparent" *ngIf="!token">Regístrate</li>
+        <li id="listadoId" (click)="navigateRouter('listado')" *ngIf="token">
+          Listado 
+          <span class="liked-span" *ngIf="cantidadLike != 0">
+            <img src="../../../../assets/icons/like_blue.png">
+            {{cantidadLike}}
+          </span>
+        </li>
+      </ul>
+    <!-- </div> -->
   </div>
 </div>
