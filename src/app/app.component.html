@@ -1,7 +1,7 @@
 
 <router-outlet></router-outlet>
 
-<select class="selectLang" #langSelect (change)="changeLang(langSelect.value)"name="" id="">
+<select class="selectLang" #langSelect (change)="changeLang(langSelect.value)">
     <option *ngFor="let item of lang" [value]="item">
         {{item}}
     </option>
