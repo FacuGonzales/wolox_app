@@ -10,7 +10,7 @@ npm install
 
 npm start
 
-## CORRER TESTING CYPRESS
+## CORRER TESTING CYPRESS ( es necesario mantener ejecutando app (npm start) al momento de ejecutar cypress )
 
 npm run e2e
 
