@@ -70,14 +70,17 @@ export class RegisterPageComponent implements OnInit {
   }
 
   validarPassword(value){
-    if(this.repeatPassword != undefined){
-      if(this.repeatPassword == value){
-        this.repeatPasswordValid = true;
-      }else{
-        this.repeatPasswordValid = false;
-      }
-    }
+    // if(this.repeatPassword != undefined){
+    //   if(this.repeatPassword == value){
+    //     this.repeatPasswordValid = true;
+    //   }else{
+    //     this.repeatPasswordValid = false;
+    //   }
+    // }
     
+    // El codigo de arriba seria equivalente a este de acabajo
+    this.repeatPasswordValid = this.repeatPasswordValid? this.repeatPassword == value : false;
+
     this.password = value
 
     this.regPassValid = this.regPass.test(value)
@@ -102,31 +105,58 @@ export class RegisterPageComponent implements OnInit {
   }
 
   changePais(value){
-    switch(value){
-      case 'Argentina' : 
-        this.provincias = ['Buenos Aires', 'Córdoba', 'Santa Fe', 'Mendoza', 'Chaco']; 
-        this.codigoNac = '+54';
-        break;
-      case 'Chile': 
-        this.provincias = ['Santiago', 'Valpraíso', 'Concepción', 'Copiapó'];
-        this.codigoNac = '+56';
-        break;
-      case 'Mexico': 
-        this.provincias = ['Ciudad de Mexico', 'Monterrey', 'Guadalajara', 'Cancún', 'Chihuahua'];
-        this.codigoNac = '+52';
-        break;
-      case 'Colombia': 
-        this.provincias = ['Bolívar', 'Boyacá', 'Caldas', 'Cauca', 'Magdalena'];
-        this.codigoNac = '+57';
-        break;
-      case 'Perú': 
-        this.provincias = ['Lima', 'Cusco', 'Arequipa', 'Ayacucho', 'Chimbote'];
-        this.codigoNac = '+51';
-        break;
-      default: this.provincias = [];
+    // switch(value){
+    //   case 'Argentina' : 
+    //     this.provincias = ['Buenos Aires', 'Córdoba', 'Santa Fe', 'Mendoza', 'Chaco']; 
+    //     this.codigoNac = '+54';
+    //     break;
+    //   case 'Chile': 
+    //     this.provincias = ['Santiago', 'Valpraíso', 'Concepción', 'Copiapó'];
+    //     this.codigoNac = '+56';
+    //     break;
+    //   case 'Mexico': 
+    //     this.provincias = ['Ciudad de Mexico', 'Monterrey', 'Guadalajara', 'Cancún', 'Chihuahua'];
+    //     this.codigoNac = '+52';
+    //     break;
+    //   case 'Colombia': 
+    //     this.provincias = ['Bolívar', 'Boyacá', 'Caldas', 'Cauca', 'Magdalena'];
+    //     this.codigoNac = '+57';
+    //     break;
+    //   case 'Perú': 
+    //     this.provincias = ['Lima', 'Cusco', 'Arequipa', 'Ayacucho', 'Chimbote'];
+    //     this.codigoNac = '+51';
+    //     break;
+    //   default: this.provincias = [];
     
-      break;
+    //   break;
+    // }
+
+    // El switch seria equivalente a hacer el siguiente codigo:
+    let paises: {
+      Argentina: {
+        provincias: ['Buenos Aires', 'Córdoba', 'Santa Fe', 'Mendoza', 'Chaco'],
+        codigoNac: '+54'
+      },
+      Chile: {
+        provincias: ['Santiago', 'Valpraíso', 'Concepción', 'Copiapó'],
+        codigoNac: '+56'
+      },
+      mexico: {
+        provincias: ['Ciudad de Mexico', 'Monterrey', 'Guadalajara', 'Cancún', 'Chihuahua'],
+        codigoNac: '+52'
+      },
+      Colombia: {
+        provincias: ['Bolívar', 'Boyacá', 'Caldas', 'Cauca', 'Magdalena'],
+        codigoNac: '+52'
+      },
+      Peru: {
+        provincias: ['Lima', 'Cusco', 'Arequipa', 'Ayacucho', 'Chimbote'],
+        codigoNac: '+51'
+      }
     }
+
+    this.provincias = paises[value]? paises[value].pronvincias : [];
+    this.codigoNac = paises[value]? paises[value].codigoNac : ''; 
   }
 
   enviar(){
@@ -156,18 +186,22 @@ export class RegisterPageComponent implements OnInit {
             this.router.navigate(['/listado']);
               
           }else{
-            this.loading=false;
-            this.tError = true;
-            setTimeout(() => {
-                this.tError = false;
-            }, 2000);
+            // this.loading=false;
+            // this.tError = true;
+            // setTimeout(() => {
+            //     this.tError = false;
+            // }, 2000);
+
+            // Codigo repetitivo, conviene realizar un metodo que contenga esto:
+            this.errorDeGuardado();
           }
         }, error => {
-          this.loading=false
-          this.tError = true;
-          setTimeout(() => {
-              this.tError = false;
-          }, 2000);
+          // this.loading=false
+          // this.tError = true;
+          // setTimeout(() => {
+          //     this.tError = false;
+          // }, 2000);
+          this.errorDeGuardado();
         }
       ))
         
@@ -180,5 +214,13 @@ export class RegisterPageComponent implements OnInit {
 
   atras(){
     this.router.navigate(['/'])
+  }
+
+  errorDeGuardado(){
+    this.loading=false
+    this.tError = true;
+    setTimeout(() => {
+        this.tError = false;
+    }, 2000);
   }
 }
